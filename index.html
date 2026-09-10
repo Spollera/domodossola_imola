@@ -105,7 +105,6 @@ body {
 }
 
 @keyframes fall {
-
     0% {
         transform: translateY(-80px) rotate(0deg);
     }
@@ -113,7 +112,6 @@ body {
     100% {
         transform: translateY(110vh) rotate(360deg);
     }
-
 }
 
 /* =========================
@@ -162,7 +160,7 @@ header {
 }
 
 /* =========================
-   CARD PRINCIPALE
+   CARD
 ========================= */
 
 .card {
@@ -204,7 +202,7 @@ header {
 }
 
 /* =========================
-   TITOLO PROPOSTA
+   TITOLO
 ========================= */
 
 .proposal-title {
@@ -216,183 +214,172 @@ header {
 
 .time {
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
     opacity: 0.65;
 }
 
 /* =========================
-   SEZIONI
+   EDIZIONE STRAORDINARIA
 ========================= */
 
-.section {
-    margin-bottom: 28px;
-}
-
-.section-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.section-description {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    opacity: 0.8;
-}
-
-/* =========================
-   MODENA
-========================= */
-
-.modena {
-    background: rgba(145, 83, 54, 0.08);
-    border-radius: 18px;
-    padding: 14px 15px;
-    margin-bottom: 15px;
+.urgent {
     text-align: center;
+    background: rgba(139, 82, 55, 0.10);
+    border: 1px solid rgba(139, 82, 55, 0.15);
+    border-radius: 17px;
+    padding: 13px 12px;
+    margin-bottom: 22px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 25px;
+}
+
+.intro-text strong {
     font-family: Georgia, serif;
     font-size: 17px;
 }
 
-.modena span {
-    display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 12px;
-    margin-top: 5px;
-    opacity: 0.75;
-}
-
 /* =========================
-   SCELTE
+   COLPO DI SCENA
 ========================= */
 
-.choices {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.choice {
-    width: 100%;
-    border: 1px solid rgba(90, 55, 40, 0.13);
-    background: rgba(255,255,255,0.45);
-    border-radius: 17px;
-    padding: 15px 16px;
-    text-align: left;
-    color: #4a3026;
-    font-family: inherit;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    position: relative;
-}
-
-.choice:hover {
-    transform: translateY(-2px);
-    background: rgba(255,255,255,0.7);
-}
-
-.choice:active {
-    transform: scale(0.98);
-}
-
-.choice.selected {
-    background: rgba(139, 82, 55, 0.16);
-    border: 2px solid rgba(139, 82, 55, 0.55);
-    padding: 14px 15px;
-    box-shadow: 0 7px 20px rgba(80,45,30,0.10);
-}
-
-.choice .check {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #8b5237;
-    color: white;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-}
-
-.choice.selected .check {
-    display: flex;
-}
-
-.choice-main {
-    padding-right: 30px;
-}
-
-.choice-note {
-    display: block;
-    font-size: 12px;
-    margin-top: 4px;
-    opacity: 0.65;
-    font-style: italic;
-}
-
-/* =========================
-   RIEPILOGO
-========================= */
-
-.summary {
-    display: none;
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 22px;
-    background: rgba(139, 82, 55, 0.10);
-    border: 1px solid rgba(139, 82, 55, 0.16);
-    animation: appear 0.5s ease;
-}
-
-.summary.show {
-    display: block;
-}
-
-.summary-title {
+.case-box {
     text-align: center;
+    margin: 5px 0 27px;
+}
+
+.case-small {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+.case-title {
     font-family: Georgia, serif;
-    font-size: 21px;
-    margin-bottom: 17px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.summary-item {
-    display: flex;
-    gap: 10px;
-    padding: 9px 0;
-    border-bottom: 1px solid rgba(90,55,40,0.10);
+.case-text {
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.55;
+    opacity: 0.82;
 }
 
-.summary-item:last-of-type {
-    border-bottom: none;
+/* =========================
+   FILM
+========================= */
+
+.movie-card {
+    position: relative;
+    text-align: center;
+    padding: 25px 18px;
+    border-radius: 23px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.55),
+            rgba(139,82,55,0.10)
+        );
+    border: 1px solid rgba(139,82,55,0.17);
+    box-shadow: 0 10px 30px rgba(80,45,30,0.08);
+    margin-bottom: 25px;
+    overflow: hidden;
 }
 
-.summary-icon {
-    width: 24px;
+.movie-icon {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.movie-title {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin-bottom: 5px;
+}
+
+.movie-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.62;
+    margin-bottom: 16px;
+}
+
+.movie-description {
+    font-size: 13px;
+    line-height: 1.55;
+    opacity: 0.8;
+}
+
+/* =========================
+   PROGRAMMA
+========================= */
+
+.program {
+    margin-top: 25px;
+}
+
+.program-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.program-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 13px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.program-icon {
+    width: 25px;
     flex-shrink: 0;
+    text-align: center;
+    font-size: 17px;
 }
 
 /* =========================
    COCCOLE
 ========================= */
 
-.coccole {
-    margin-top: 12px;
+.extra {
     text-align: center;
     font-family: Georgia, serif;
     font-size: 17px;
+    margin: 20px 0 25px;
+}
+
+/* =========================
+   DOMANDA
+========================= */
+
+.question {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 15px;
 }
 
 /* =========================
@@ -402,16 +389,15 @@ header {
 .buttons {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
 }
 
 .buttons button {
     flex: 1;
     border: none;
     border-radius: 16px;
-    padding: 15px 10px;
+    padding: 15px 8px;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -442,7 +428,7 @@ header {
 .result {
     display: none;
     margin-top: 25px;
-    padding: 22px 17px;
+    padding: 23px 18px;
     border-radius: 22px;
     text-align: center;
     background: rgba(255,255,255,0.45);
@@ -456,16 +442,16 @@ header {
 .result-title {
     font-family: Georgia, serif;
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 
 .result-text {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .retry {
-    margin-top: 17px;
+    margin-top: 18px;
     border: none;
     background: transparent;
     color: #7e513b;
@@ -556,6 +542,10 @@ footer {
         font-size: 25px;
     }
 
+    .movie-title {
+        font-size: 26px;
+    }
+
 }
 
 </style>
@@ -619,7 +609,7 @@ footer {
 
 
         <!-- =========================
-             PROPOSTA
+             TITOLO
         ========================= -->
 
         <div class="proposal-title">
@@ -627,74 +617,64 @@ footer {
         </div>
 
         <div class="time">
-            🌙 Stasera • ore 19:30
+            🌙 Edizione straordinaria
         </div>
 
 
         <!-- =========================
-             TORTELLINI
+             AVVISO
         ========================= -->
 
-        <div class="section">
+        <div class="urgent">
+            ⚠️ Comunicazione urgente dall'Ufficio Proposte di Spirit
+        </div>
 
-            <div class="section-title">
-                🍝 Primo livello: i tortellini
+
+        <!-- =========================
+             INTRO
+        ========================= -->
+
+        <div class="intro-text">
+
+            A seguito degli ultimi sviluppi cinematografici,
+            Spirit comunica ufficialmente una modifica
+            al programma della serata.
+
+            <br><br>
+
+            Oggi hai visto <strong>Knives Out</strong>.
+
+            <br>
+
+            E ti è piaciuto. 😌
+
+            <br><br>
+
+            Pertanto, gli eventi hanno preso
+            una piega piuttosto prevedibile...
+
+        </div>
+
+
+        <!-- =========================
+             CASO
+        ========================= -->
+
+        <div class="case-box">
+
+            <div class="case-small">
+                Il caso è risolto
             </div>
 
-            <div class="section-description">
-                Una cosa è certa: i tortellini ci sono.
-                Il destino, però, lascia a te la scelta del condimento.
+            <div class="case-title">
+                🔎 Si procede.
             </div>
 
-            <div class="modena">
-                Da Modena with Love ❤️
-                <span>grazie Pioggia</span>
-            </div>
+            <div class="case-text">
 
-
-            <div class="choices">
-
-                <button class="choice"
-                        onclick="selectSauce(1)"
-                        id="sauce1">
-
-                    <div class="choice-main">
-                        🧀 Crema di Parmigiano
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
-
-
-                <button class="choice"
-                        onclick="selectSauce(2)"
-                        id="sauce2">
-
-                    <div class="choice-main">
-                        🥓 Crema di Parmigiano e guanciale
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
-
-
-                <button class="choice"
-                        onclick="selectSauce(3)"
-                        id="sauce3">
-
-                    <div class="choice-main">
-                        🎃 Crema di zucca e speck
-
-                        <span class="choice-note">
-                            Ci possiamo provare 😏
-                        </span>
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
+                Dopo aver apprezzato il primo caso,
+                è arrivato il momento di affrontare
+                il secondo.
 
             </div>
 
@@ -705,87 +685,26 @@ footer {
              FILM
         ========================= -->
 
-        <div class="section">
+        <div class="movie-card">
 
-            <div class="section-title">
-                🎬 Secondo livello: il film
+            <div class="movie-icon">
+                🔪
             </div>
 
-            <div class="section-description">
-                Ora tocca scegliere il film.
-                Una decisione apparentemente semplice,
-                ma Spirit giudicherà silenziosamente.
+            <div class="movie-title">
+                Glass Onion
             </div>
 
+            <div class="movie-subtitle">
+                A Knives Out Mystery
+            </div>
 
-            <div class="choices">
+            <div class="movie-description">
 
-                <button class="choice"
-                        onclick="selectFilm(1)"
-                        id="film1">
-
-                    <div class="choice-main">
-                        🐟 Big Fish
-                        <span class="choice-note">
-                            Le storie di una vita incredibile
-                        </span>
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
-
-
-                <button class="choice"
-                        onclick="selectFilm(2)"
-                        id="film2">
-
-                    <div class="choice-main">
-                        👻 The Conjuring
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
-
-
-                <button class="choice"
-                        onclick="selectFilm(3)"
-                        id="film3">
-
-                    <div class="choice-main">
-                        🌊 Elements
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
-
-
-                <button class="choice"
-                        onclick="selectFilm(4)"
-                        id="film4">
-
-                    <div class="choice-main">
-                        🐶 Attraverso i miei occhi
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
-
-
-                <button class="choice"
-                        onclick="selectFilm(5)"
-                        id="film5">
-
-                    <div class="choice-main">
-                        🔪 Knives Out
-                    </div>
-
-                    <div class="check">✓</div>
-
-                </button>
+                Il seguito perfetto per una serata
+                di misteri, sospetti, investigazioni
+                e probabilmente troppe domande
+                del tipo: "Ma secondo te è stato lui?"
 
             </div>
 
@@ -793,71 +712,88 @@ footer {
 
 
         <!-- =========================
-             RIEPILOGO
+             PROGRAMMA
         ========================= -->
 
-        <div class="summary" id="summary">
+        <div class="program">
 
-            <div class="summary-title">
-                Il tuo programma per stasera ❤️
+            <div class="program-title">
+                Programma ufficiale della serata
             </div>
 
 
-            <div class="summary-item">
+            <div class="program-item">
 
-                <div class="summary-icon">
-                    🕢
+                <div class="program-icon">
+                    🍽️
                 </div>
 
                 <div>
-                    <strong>19:30</strong>
+                    <strong>Prima:</strong><br>
+                    cena
                 </div>
 
             </div>
 
 
-            <div class="summary-item">
+            <div class="program-item">
 
-                <div class="summary-icon">
-                    🍝
+                <div class="program-icon">
+                    🏠
                 </div>
 
                 <div>
-                    Tortellini — <span id="summarySauce"></span>
+                    <strong>Poi:</strong><br>
+                    trasferimento strategico a Casa Sereni
                 </div>
 
             </div>
 
 
-            <div class="summary-item">
+            <div class="program-item">
 
-                <div class="summary-icon">
+                <div class="program-icon">
                     🎬
                 </div>
 
                 <div>
-                    Film — <span id="summaryFilm"></span>
+                    <strong>Infine:</strong><br>
+                    Glass Onion — A Knives Out Mystery
                 </div>
 
             </div>
 
-
-            <div class="coccole">
-                🫶 Coccole e roba
-            </div>
+        </div>
 
 
-            <div class="buttons">
+        <!-- =========================
+             EXTRA
+        ========================= -->
 
-                <button class="yes" onclick="sayYes()">
-                    SÌ ❤️
-                </button>
+        <div class="extra">
+            🫶 Extra non specificato: coccole e roba
+        </div>
 
-                <button class="no" onclick="sayNo()">
-                    NO 🥲
-                </button>
 
-            </div>
+        <!-- =========================
+             DOMANDA
+        ========================= -->
+
+        <div class="question">
+            La proposta è stata aggiornata.<br>
+            Accetti l'incarico, detective? 🔎
+        </div>
+
+
+        <div class="buttons">
+
+            <button class="yes" onclick="sayYes()">
+                ACCETTO ❤️
+            </button>
+
+            <button class="no" onclick="sayNo()">
+                DEVO RIFLETTERE 🥲
+            </button>
 
         </div>
 
@@ -872,11 +808,8 @@ footer {
 
             <div class="result-text" id="resultText"></div>
 
-            <button class="retry"
-                    onclick="retryProposal()">
-
-                Cambia le mie scelte 😏
-
+            <button class="retry" onclick="retryProposal()">
+                Ci devo ripensare 😏
             </button>
 
         </div>
@@ -907,126 +840,6 @@ footer {
 <script>
 
 /* =========================
-   VARIABILI
-========================= */
-
-let selectedSauce = null;
-let selectedFilm = null;
-
-
-/* =========================
-   DATI
-========================= */
-
-const sauces = {
-
-    1: "Crema di Parmigiano",
-
-    2: "Crema di Parmigiano e guanciale",
-
-    3: "Crema di zucca e speck"
-
-};
-
-
-const films = {
-
-    1: "Big Fish — Le storie di una vita incredibile",
-
-    2: "The Conjuring",
-
-    3: "Elements",
-
-    4: "Attraverso i miei occhi",
-
-    5: "Knives Out"
-
-};
-
-
-/* =========================
-   SCELTA CONDIMENTO
-========================= */
-
-function selectSauce(number) {
-
-    selectedSauce = number;
-
-    for (let i = 1; i <= 3; i++) {
-
-        document
-            .getElementById("sauce" + i)
-            .classList.remove("selected");
-
-    }
-
-    document
-        .getElementById("sauce" + number)
-        .classList.add("selected");
-
-    updateSummary();
-
-}
-
-
-/* =========================
-   SCELTA FILM
-========================= */
-
-function selectFilm(number) {
-
-    selectedFilm = number;
-
-    for (let i = 1; i <= 5; i++) {
-
-        document
-            .getElementById("film" + i)
-            .classList.remove("selected");
-
-    }
-
-    document
-        .getElementById("film" + number)
-        .classList.add("selected");
-
-    updateSummary();
-
-}
-
-
-/* =========================
-   AGGIORNA RIEPILOGO
-========================= */
-
-function updateSummary() {
-
-    const summary = document.getElementById("summary");
-
-    if (selectedSauce !== null && selectedFilm !== null) {
-
-        document.getElementById("summarySauce").textContent =
-            sauces[selectedSauce];
-
-        document.getElementById("summaryFilm").textContent =
-            films[selectedFilm];
-
-        summary.classList.add("show");
-
-        setTimeout(() => {
-
-            summary.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        }, 150);
-
-    }
-
-}
-
-
-/* =========================
    SÌ ❤️
 ========================= */
 
@@ -1037,12 +850,12 @@ function sayYes() {
     const text = document.getElementById("resultText");
 
     title.textContent =
-        "OTTIMA RISPOSTA, PIOGGIA ❤️";
+        "OTTIMA DECISIONE, PIOGGIA. ❤️";
 
     text.innerHTML =
-        "Spirit è molto soddisfatto delle tue scelte. 😌<br><br>" +
-        "Appuntamento confermato: <strong>ore 19:30</strong>.<br>" +
-        "Tortellini, film e tutto il resto sono ufficialmente approvati. 🫶";
+        "Spirit sarà da te dopo cena. 😌<br><br>" +
+        "Il caso <strong>Glass Onion</strong> è ufficialmente aperto. 🔪🍸<br><br>" +
+        "<em>Si prega di presentarsi con spirito investigativo.</em> 🔎";
 
     result.classList.add("show");
 
@@ -1071,12 +884,13 @@ function sayNo() {
     const text = document.getElementById("resultText");
 
     title.textContent =
-        "Decisione inattesa. 🥲";
+        "Spirit comprende. 🥲";
 
     text.innerHTML =
-        "Spirit sta rivalutando le proprie capacità di organizzazione.<br><br>" +
-        "Forse il problema era il condimento. 🍂<br><br>" +
-        "Ma sei proprio sicura? 😏";
+        "Tuttavia, considerando che hai già dichiarato " +
+        "di gradire il primo capitolo...<br><br>" +
+        "gli indizi sembrano piuttosto evidenti. 🔎<br><br>" +
+        "<strong>Riprova, detective.</strong> 😏";
 
     result.classList.add("show");
 
@@ -1093,7 +907,7 @@ function sayNo() {
 
 
 /* =========================
-   CAMBIA SCELTE
+   RIPROVA
 ========================= */
 
 function retryProposal() {
@@ -1101,11 +915,8 @@ function retryProposal() {
     document.getElementById("result")
         .classList.remove("show");
 
-    document.getElementById("summary")
-        .classList.add("show");
-
     window.scrollTo({
-        top: document.getElementById("summary").offsetTop - 40,
+        top: document.querySelector(".buttons").offsetTop - 50,
         behavior: "smooth"
     });
 
@@ -1124,10 +935,13 @@ function createConfetti() {
         "🍁",
         "✨",
         "🤎",
-        "🫶"
+        "🫶",
+        "🔎",
+        "🔪",
+        "🍸"
     ];
 
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < 40; i++) {
 
         const confetti =
             document.createElement("div");
