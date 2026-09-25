@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8a5b43">
+<title>Ritorno a Casa Sereni</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="bg">
+  <div class="glow"></div><div class="moon"></div>
+  <div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div>
+  <div class="fog"></div>
+</div>
+
+<!-- event-page -->
+<div class="shell">
+<header>
+  <div class="kicker">Le proposte di Spirit</div>
+  <div class="brand">Casa Sereni</div>
+  <div class="season">VENERDÌ 25 SETTEMBRE • ORE 19:30</div>
+</header>
+<main>
+  <section class="card">
+    <div class="pill">❤️ Operazione: ritorno a Casa Sereni</div>
+    <h1 style="margin-top:16px">Ciao Pioggia.</h1>
+    <p class="lead">
+      Questa settimana Spirit è stato decisamente meno presente del solito.
+      Troppi impegni, troppo poco tempo e soprattutto <strong>troppo poca Casa Sereni</strong>.
+      L'Ufficio Proposte propone quindi una serata semplice: noi, una cena, un film e un po' di tempo insieme.
+    </p>
+
+    <div class="section">
+      <div class="eyebrow">Fase 01</div>
+      <div class="section-title">🍝 Scegli la cena</div>
+      <p class="section-text">Spirit presenta tre possibilità ufficialmente compatibili con l'autunno.</p>
+      <div class="choice-list">
+        <button class="choice dinner" data-value="Risotto zucca & speck"><strong>🎃 Risotto zucca & speck</strong><small>Autunno allo stato puro.</small><span class="tick">✓</span></button>
+        <button class="choice dinner" data-value="Pasta zucca & speck"><strong>🍝 Pasta zucca & speck</strong><small>Stessa filosofia, diversa consistenza.</small><span class="tick">✓</span></button>
+        <button class="choice dinner" data-value="Minestra di ceci"><strong>🥣 Minestra di ceci</strong><small>Comfort food ufficiale di Casa Sereni.</small><span class="tick">✓</span></button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="eyebrow">Fase 02</div>
+      <div class="section-title">🍷 Protocollo Beverdì</div>
+      <div class="softbox">
+        Essendo oggi venerdì, il regolamento non scritto di Casa Sereni autorizza l'apertura di una bottiglia di vino.<br><br>
+        <strong>Venerdì + vino = Beverdì.</strong><br>
+        L'Ufficio Proposte non ritiene necessarie ulteriori spiegazioni.
+        <button class="hero-action" id="wineBtn" style="margin-top:15px">🍷 ATTIVA BEVERDÌ</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="eyebrow">Fase 03</div>
+      <div class="section-title">🎬 Protocollo Horror sospeso</div>
+      <div class="darkbox">
+        <p class="section-text">
+          A causa di improrogabili operazioni logistiche previste domani mattina alle <strong>08:00</strong> —
+          nello specifico: <em>rientro della legna</em> — Spirit non potrà pernottare a Casa Sereni.<br><br>
+          Considerato che lasciare Pioggia sola dopo un horror costituirebbe una grave violazione del Protocollo Anti-Incubo,
+          <strong>questa sera si passa a un film soft.</strong> ❤️
+        </p>
+        <div class="center" style="margin-top:12px;font-size:12px;opacity:.6">
+          Gli spiriti maligni sono pregati di ripresentarsi in una data compatibile con il pernottamento di Spirit.
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="eyebrow">Fase 04</div>
+      <div class="section-title">🍿 Reparto spuntini</div>
+      <p class="section-text">
+        Dopo la visita dal dentista, Spirit ha deciso questa volta di non presentarsi con il consueto carico di caramelle.
+        Ma Casa Sereni non può affrontare la serata senza viveri di conforto.
+      </p>
+      <div class="softbox">
+        <h3>Pioggia, cosa desideri?</h3>
+        <p class="section-text" style="margin-top:6px">Scrivi tre possibilità. Spirit proverà a reperirne almeno una.</p>
+        <div class="inputs">
+          <input id="snack1" maxlength="80" placeholder="Desiderio n. 1">
+          <input id="snack2" maxlength="80" placeholder="Desiderio n. 2">
+          <input id="snack3" maxlength="80" placeholder="Desiderio n. 3">
+        </div>
+        <button class="hero-action secondary" id="shareSnacks">📨 INVIA LA LISTA A SPIRIT</button>
+        <div class="notice" id="shareNotice"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="eyebrow">Fase 05</div>
+      <div class="section-title">🫶 Tempo per noi</div>
+      <div class="softbox center">
+        Una cena.<br>
+        Un bicchiere di vino.<br>
+        Un film.<br>
+        Coccole & roba.<br>
+        Un po' di tempo insieme.<br><br>
+        <strong>Era ora. ❤️</strong>
+      </div>
+    </div>
+
+    <div class="summary" id="summary">
+      <h2 class="center">📜 Programma della serata</h2>
+      <div class="summary-row"><div class="ico">🕢</div><div><strong>19:30 — Casa Sereni</strong></div></div>
+      <div class="summary-row"><div class="ico">🍝</div><div><strong>Cena</strong><br><span id="sumDinner">da scegliere</span></div></div>
+      <div class="summary-row"><div class="ico">🍷</div><div><strong>Beverdì</strong><br><span id="sumWine">in attesa di autorizzazione</span></div></div>
+      <div class="summary-row"><div class="ico">🎬</div><div><strong>Film</strong><br>Soft — da scegliere insieme sul divano</div></div>
+      <div class="summary-row"><div class="ico">🍿</div><div><strong>Spuntino</strong><br>Spirit proverà a reperire almeno uno dei tre desideri.</div></div>
+      <div class="summary-row"><div class="ico">🫶</div><div><strong>Extra</strong><br>Coccole & roba</div></div>
+      <button class="hero-action green" id="confirmBtn">CONFERMO LA SERATA ❤️</button>
+      <div class="notice" id="confirmNotice"></div>
+    </div>
+  </section>
+</main>
+<footer>Casa Sereni — Ufficio Proposte di Spirit 🍂</footer>
+</div>
+
+<script>
+let dinner=localStorage.getItem("cs25_dinner")||"";
+let wine=localStorage.getItem("cs25_wine")==="1";
+const snackIds=["snack1","snack2","snack3"];
+
+function restore(){
+  document.querySelectorAll(".dinner").forEach(b=>{
+    b.classList.toggle("selected",b.dataset.value===dinner);
+  });
+  if(dinner) document.getElementById("summary").classList.add("show");
+  document.getElementById("sumDinner").textContent=dinner||"da scegliere";
+  const wb=document.getElementById("wineBtn");
+  wb.textContent=wine?"🍷 BEVERDÌ ATTIVATO":"🍷 ATTIVA BEVERDÌ";
+  wb.classList.toggle("green",wine);
+  document.getElementById("sumWine").textContent=wine?"ATTIVO — bottiglia prevista":"non ancora attivato";
+  snackIds.forEach((id,i)=>document.getElementById(id).value=localStorage.getItem("cs25_"+id)||"");
+}
+document.querySelectorAll(".dinner").forEach(btn=>btn.onclick=()=>{
+  dinner=btn.dataset.value;localStorage.setItem("cs25_dinner",dinner);
+  document.querySelectorAll(".dinner").forEach(b=>b.classList.toggle("selected",b===btn));
+  document.getElementById("sumDinner").textContent=dinner;
+  document.getElementById("summary").classList.add("show");
+});
+document.getElementById("wineBtn").onclick=()=>{
+  wine=!wine;localStorage.setItem("cs25_wine",wine?"1":"0");
+  restore(); if(wine) confetti(["🍷","🍂","✨"],18);
+};
+snackIds.forEach(id=>document.getElementById(id).addEventListener("input",e=>localStorage.setItem("cs25_"+id,e.target.value)));
+document.getElementById("shareSnacks").onclick=async()=>{
+  const vals=snackIds.map(id=>document.getElementById(id).value.trim()).filter(Boolean);
+  const msg="🍿 CASA SERENI — Lista spuntini di Pioggia\n\n"+(vals.length?vals.map((v,i)=>`${i+1}. ${v}`).join("\n"):"Nessun desiderio inserito 😶")+"\n\nSpirit proverà a reperirne almeno uno. ❤️";
+  const n=document.getElementById("shareNotice");
+  try{
+    if(navigator.share){await navigator.share({title:"Lista spuntini Casa Sereni",text:msg});n.textContent="Lista pronta per essere inviata a Spirit ❤️";n.classList.add("show")}
+    else{await navigator.clipboard.writeText(msg);n.textContent="Lista copiata. Incollala in un messaggio a Spirit ❤️";n.classList.add("show")}
+  }catch(e){}
+};
+document.getElementById("confirmBtn").onclick=async()=>{
+  confetti(["❤️","🍂","🍷","🫶","✨"],42);
+  const n=document.getElementById("confirmNotice");
+  n.textContent="PROPOSTA ACCETTATA ❤️ — L'Ufficio Proposte considera la serata ufficialmente confermata.";
+  n.classList.add("show");
+  const msg=`❤️ CASA SERENI — Proposta accettata\n🍝 ${dinner||"Cena da definire"}\n🍷 Beverdì: ${wine?"ATTIVO":"non attivato"}\n🎬 Film soft\n🫶 Coccole & roba`;
+  try{ if(navigator.share) await navigator.share({title:"Casa Sereni",text:msg}); }catch(e){}
+};
+restore();
+</script>
+
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="active"><span>🏠</span>Home</a>
+  <a href="../calendario.html" class=""><span>📅</span>Calendario</a>
+  <a href="../contratto.html" class=""><span>📜</span>Contratto</a>
+  <a href="../archivio.html" class=""><span>🗂️</span>Archivio</a>
+</nav>
+<script src="../assets/common.js"></script>
+</body></html>

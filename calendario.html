@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8a5b43">
+<title>Calendario — Casa Sereni</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="bg">
+  <div class="glow"></div><div class="moon"></div>
+  <div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div>
+  <div class="fog"></div>
+</div>
+
+<div class="shell">
+<header>
+  <div class="kicker">Casa Sereni</div>
+  <div class="brand">Calendario</div>
+  <div class="season">EVENTI • PROPOSTE • RICORDI</div>
+</header>
+<main class="card">
+  <div class="eyebrow">Cronologia di Casa Sereni</div>
+  <h1 style="font-size:29px">Ogni serata lascia una traccia.</h1>
+  <p class="lead">Tocca un giorno segnato per riaprire la proposta di quell'evento.</p>
+
+  <div class="section">
+    <div class="calendar-head">
+      <button id="prev">‹</button>
+      <h2 id="monthTitle"></h2>
+      <button id="next">›</button>
+    </div>
+    <div class="weekdays">
+      <div>L</div><div>M</div><div>M</div><div>G</div><div>V</div><div>S</div><div>D</div>
+    </div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+  </div>
+
+  <div class="section">
+    <div class="eyebrow">Eventi del mese</div>
+    <div class="event-list" id="eventList"></div>
+  </div>
+</main>
+<footer>Casa Sereni — gli eventi non si cancellano più 🍂</footer>
+</div>
+
+<script>
+const EVENTS = [
+  {date:"2026-09-07", icon:"🍝", title:"Tortellini da Modena", note:"Cena, film e coccole.", href:"eventi/2026-09-07-tortellini.html"},
+  {date:"2026-09-10", icon:"🔎", title:"Glass Onion", note:"Il secondo caso Knives Out.", href:"eventi/2026-09-10-glass-onion.html"},
+  {date:"2026-09-16", icon:"👻", title:"Protocollo Horror", note:"Film horror e Servizio Anti-Incubo.", href:"eventi/2026-09-16-protocollo-horror.html"},
+  {date:"2026-09-25", icon:"🍷", title:"Ritorno a Casa Sereni", note:"Beverdì, film soft e tempo per noi.", href:"eventi/2026-09-25-ritorno.html"}
+];
+
+let cursor = new Date(2026,8,1);
+const names=["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+
+function render(){
+  document.getElementById("monthTitle").textContent=names[cursor.getMonth()]+" "+cursor.getFullYear();
+  const grid=document.getElementById("calendarGrid");
+  grid.innerHTML="";
+  const y=cursor.getFullYear(),m=cursor.getMonth();
+  const first=(new Date(y,m,1).getDay()+6)%7;
+  const days=new Date(y,m+1,0).getDate();
+  for(let i=0;i<first;i++){const e=document.createElement("div");e.className="day empty";grid.appendChild(e)}
+  for(let d=1;d<=days;d++){
+    const iso=`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+    const ev=EVENTS.find(x=>x.date===iso);
+    const el=document.createElement(ev?"a":"div");
+    el.className="day"+(ev?" has-event":"")+(iso==="2026-09-25"?" today":"");
+    el.textContent=d;
+    if(ev){el.href=ev.href; const dot=document.createElement("span");dot.className="dot";dot.textContent=ev.icon;el.appendChild(dot)}
+    grid.appendChild(el);
+  }
+
+  const list=document.getElementById("eventList");
+  list.innerHTML="";
+  EVENTS.filter(e=>e.date.startsWith(`${y}-${String(m+1).padStart(2,"0")}`)).forEach(ev=>{
+    const dt=new Date(ev.date+"T12:00:00");
+    const a=document.createElement("a");
+    a.className="event-card";a.href=ev.href;
+    a.innerHTML=`<div class="event-date"><b>${dt.getDate()}</b><small>${names[dt.getMonth()].slice(0,3).toUpperCase()}</small></div>
+      <div><h3>${ev.icon} ${ev.title}</h3><p>${ev.note}</p></div>`;
+    list.appendChild(a);
+  });
+  if(!list.children.length) list.innerHTML='<div class="softbox center">Nessun evento archiviato in questo mese.</div>';
+}
+document.getElementById("prev").onclick=()=>{cursor=new Date(cursor.getFullYear(),cursor.getMonth()-1,1);render()}
+document.getElementById("next").onclick=()=>{cursor=new Date(cursor.getFullYear(),cursor.getMonth()+1,1);render()}
+render();
+</script>
+
+
+<nav class="bottom-nav">
+  <a href="index.html" class=""><span>🏠</span>Home</a>
+  <a href="calendario.html" class="active"><span>📅</span>Calendario</a>
+  <a href="contratto.html" class=""><span>📜</span>Contratto</a>
+  <a href="archivio.html" class=""><span>🗂️</span>Archivio</a>
+</nav>
+<script src="assets/common.js"></script>
+</body></html>
