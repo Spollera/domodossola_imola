@@ -8,95 +8,263 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
 <div class="bg">
-  <div class="glow"></div><div class="moon"></div>
+  <div class="glow"></div>
+  <div class="moon"></div>
   <div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div>
   <div class="fog"></div>
 </div>
 
 <div class="shell">
+
 <header>
   <div class="kicker">Casa Sereni</div>
   <div class="brand">Calendario</div>
-  <div class="season">EVENTI • PROPOSTE • RICORDI</div>
+  <div class="season">EVENTI • PROPOSTE • CONTRATTO</div>
 </header>
+
 <main class="card">
+
   <div class="eyebrow">Cronologia di Casa Sereni</div>
   <h1 style="font-size:29px">Ogni serata lascia una traccia.</h1>
-  <p class="lead">Tocca un giorno segnato per riaprire la proposta di quell'evento.</p>
+
+  <p class="lead">
+    Le serate sono contrassegnate con ❤️/🍷/👻, gli eventi contrattuali con 📜
+    e i momenti strategici con 🎂.
+  </p>
 
   <div class="section">
+
     <div class="calendar-head">
       <button id="prev">‹</button>
       <h2 id="monthTitle"></h2>
       <button id="next">›</button>
     </div>
+
     <div class="weekdays">
       <div>L</div><div>M</div><div>M</div><div>G</div><div>V</div><div>S</div><div>D</div>
     </div>
+
     <div class="calendar-grid" id="calendarGrid"></div>
+
   </div>
 
   <div class="section">
     <div class="eyebrow">Eventi del mese</div>
     <div class="event-list" id="eventList"></div>
   </div>
+
 </main>
-<footer>Casa Sereni — gli eventi non si cancellano più 🍂</footer>
+
+<footer>
+  Casa Sereni — serate, ricordi e burocrazia sentimentale 🍂
+</footer>
+
 </div>
 
+<nav class="bottom-nav">
+  <a href="index.html"><span>🏠</span>Home</a>
+  <a href="calendario.html" class="active"><span>📅</span>Calendario</a>
+  <a href="contratto.html"><span>📜</span>Contratto</a>
+  <a href="archivio.html"><span>🗂️</span>Archivio</a>
+</nav>
+
+<script src="assets/common.js"></script>
+
 <script>
+
 const EVENTS = [
-  {date:"2026-09-07", icon:"🍝", title:"Tortellini da Modena", note:"Cena, film e coccole.", href:"eventi/2026-09-07-tortellini.html"},
-  {date:"2026-09-10", icon:"🔎", title:"Glass Onion", note:"Il secondo caso Knives Out.", href:"eventi/2026-09-10-glass-onion.html"},
-  {date:"2026-09-16", icon:"👻", title:"Protocollo Horror", note:"Film horror e Servizio Anti-Incubo.", href:"eventi/2026-09-16-protocollo-horror.html"},
-  {date:"2026-09-25", icon:"🍷", title:"Ritorno a Casa Sereni", note:"Beverdì, film soft e tempo per noi.", href:"eventi/2026-09-25-ritorno.html"}
+
+  {
+    date:"2026-07-11",
+    icon:"📜",
+    title:"Stipula dell'Accordo",
+    note:"Nasce ufficialmente l'Accordo consensuale Pioggia × Spirit.",
+    href:"contratto.html",
+    type:"contratto"
+  },
+
+  {
+    date:"2026-09-07",
+    icon:"🍝",
+    title:"Tortellini da Modena",
+    note:"Cena, film e coccole.",
+    href:"eventi/2026-09-07-tortellini.html",
+    type:"serata"
+  },
+
+  {
+    date:"2026-09-07",
+    icon:"📜",
+    title:"Scadenza originaria dell'Accordo",
+    note:"Data di scadenza riportata nel documento originale.",
+    href:"contratto.html",
+    type:"contratto"
+  },
+
+  {
+    date:"2026-09-10",
+    icon:"🔎",
+    title:"Glass Onion",
+    note:"Il secondo caso Knives Out.",
+    href:"eventi/2026-09-10-glass-onion.html",
+    type:"serata"
+  },
+
+  {
+    date:"2026-09-16",
+    icon:"👻",
+    title:"Protocollo Horror",
+    note:"Film horror e Servizio Anti-Incubo Spirit™.",
+    href:"eventi/2026-09-16-protocollo-horror.html",
+    type:"serata"
+  },
+
+  {
+    date:"2026-09-25",
+    icon:"🍷",
+    title:"Ritorno a Casa Sereni",
+    note:"Beverdì, film soft e tempo per noi.",
+    href:"eventi/2026-09-25-ritorno.html",
+    type:"serata"
+  },
+
+  {
+    date:"2026-10-15",
+    icon:"🎂",
+    title:"Compleanno di Spirit",
+    note:"Evento societario di rilevanza strategica.",
+    href:"contratto.html",
+    type:"compleanno"
+  },
+
+  {
+    date:"2026-10-16",
+    icon:"⚖️",
+    title:"Nuova scadenza dell'Accordo",
+    note:"Scadenza risultante dalla Proroga n. 01.",
+    href:"contratto.html",
+    type:"contratto"
+  }
+
 ];
 
 let cursor = new Date(2026,8,1);
-const names=["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+
+const names=[
+  "Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno",
+  "Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"
+];
 
 function render(){
-  document.getElementById("monthTitle").textContent=names[cursor.getMonth()]+" "+cursor.getFullYear();
-  const grid=document.getElementById("calendarGrid");
-  grid.innerHTML="";
-  const y=cursor.getFullYear(),m=cursor.getMonth();
-  const first=(new Date(y,m,1).getDay()+6)%7;
-  const days=new Date(y,m+1,0).getDate();
-  for(let i=0;i<first;i++){const e=document.createElement("div");e.className="day empty";grid.appendChild(e)}
+
+  const y = cursor.getFullYear();
+  const m = cursor.getMonth();
+
+  document.getElementById("monthTitle").textContent =
+    names[m] + " " + y;
+
+  const grid = document.getElementById("calendarGrid");
+  grid.innerHTML = "";
+
+  const first = (new Date(y,m,1).getDay()+6)%7;
+  const days = new Date(y,m+1,0).getDate();
+
+  for(let i=0;i<first;i++){
+    const e=document.createElement("div");
+    e.className="day empty";
+    grid.appendChild(e);
+  }
+
   for(let d=1;d<=days;d++){
-    const iso=`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
-    const ev=EVENTS.find(x=>x.date===iso);
-    const el=document.createElement(ev?"a":"div");
-    el.className="day"+(ev?" has-event":"")+(iso==="2026-09-25"?" today":"");
-    el.textContent=d;
-    if(ev){el.href=ev.href; const dot=document.createElement("span");dot.className="dot";dot.textContent=ev.icon;el.appendChild(dot)}
+
+    const iso =
+      `${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+
+    const dayEvents = EVENTS.filter(x=>x.date===iso);
+
+    let el;
+
+    if(dayEvents.length){
+      el = document.createElement("a");
+      el.className = "day has-event";
+      el.href = dayEvents[0].href;
+    } else {
+      el = document.createElement("div");
+      el.className = "day";
+    }
+
+    if(iso==="2026-09-25"){
+      el.classList.add("today");
+    }
+
+    el.appendChild(document.createTextNode(d));
+
+    if(dayEvents.length){
+
+      const dots=document.createElement("span");
+      dots.className="multi-dots";
+      dots.textContent=dayEvents.map(ev=>ev.icon).join("");
+
+      el.appendChild(dots);
+    }
+
     grid.appendChild(el);
   }
 
   const list=document.getElementById("eventList");
   list.innerHTML="";
-  EVENTS.filter(e=>e.date.startsWith(`${y}-${String(m+1).padStart(2,"0")}`)).forEach(ev=>{
+
+  const monthEvents = EVENTS.filter(
+    e=>e.date.startsWith(`${y}-${String(m+1).padStart(2,"0")}`)
+  );
+
+  monthEvents.forEach(ev=>{
+
     const dt=new Date(ev.date+"T12:00:00");
+
     const a=document.createElement("a");
-    a.className="event-card";a.href=ev.href;
-    a.innerHTML=`<div class="event-date"><b>${dt.getDate()}</b><small>${names[dt.getMonth()].slice(0,3).toUpperCase()}</small></div>
-      <div><h3>${ev.icon} ${ev.title}</h3><p>${ev.note}</p></div>`;
+    a.className="event-card";
+    a.href=ev.href;
+
+    a.innerHTML=`
+      <div class="event-date">
+        <b>${dt.getDate()}</b>
+        <small>${names[dt.getMonth()].slice(0,3).toUpperCase()}</small>
+      </div>
+
+      <div>
+        <h3>${ev.icon} ${ev.title}</h3>
+        <p>${ev.note}</p>
+        <span class="event-type ${ev.type}">
+          ${ev.type==="contratto" ? "Contratto" : ev.type==="compleanno" ? "Evento speciale" : "Serata"}
+        </span>
+      </div>
+    `;
+
     list.appendChild(a);
+
   });
-  if(!list.children.length) list.innerHTML='<div class="softbox center">Nessun evento archiviato in questo mese.</div>';
+
+  if(!list.children.length){
+    list.innerHTML='<div class="softbox center">Nessun evento archiviato in questo mese.</div>';
+  }
 }
-document.getElementById("prev").onclick=()=>{cursor=new Date(cursor.getFullYear(),cursor.getMonth()-1,1);render()}
-document.getElementById("next").onclick=()=>{cursor=new Date(cursor.getFullYear(),cursor.getMonth()+1,1);render()}
+
+document.getElementById("prev").onclick=()=>{
+  cursor=new Date(cursor.getFullYear(),cursor.getMonth()-1,1);
+  render();
+};
+
+document.getElementById("next").onclick=()=>{
+  cursor=new Date(cursor.getFullYear(),cursor.getMonth()+1,1);
+  render();
+};
+
 render();
+
 </script>
 
-
-<nav class="bottom-nav">
-  <a href="index.html" class=""><span>🏠</span>Home</a>
-  <a href="calendario.html" class="active"><span>📅</span>Calendario</a>
-  <a href="contratto.html" class=""><span>📜</span>Contratto</a>
-  <a href="archivio.html" class=""><span>🗂️</span>Archivio</a>
-</nav>
-<script src="assets/common.js"></script>
-</body></html>
+</body>
+</html>

@@ -8,133 +8,392 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
 <div class="bg">
-  <div class="glow"></div><div class="moon"></div>
-  <div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div><div class="fall">🍁</div><div class="fall">🍂</div>
+  <div class="glow"></div>
+  <div class="moon"></div>
+  <div class="fall">🍂</div>
+  <div class="fall">🍁</div>
+  <div class="fall">🍂</div>
+  <div class="fall">🍁</div>
+  <div class="fall">🍂</div>
   <div class="fog"></div>
 </div>
 
 <div class="shell">
+
 <header>
   <div class="kicker">Archivio riservato</div>
   <div class="brand">Il Contratto</div>
-  <div class="season">PIOGGIA × SPIRIT • 2026</div>
+  <div class="season">PIOGGIA × SPIRIT • ACCORDO VIVO</div>
 </header>
+
 <main>
-  <section class="card">
-    <div class="pill">📜 Documento ufficiale</div>
-    <h1 style="margin-top:16px">Prima delle proposte,<br>venne l'Accordo.</h1>
-    <p class="lead">
-      Un documento concepito per disciplinare, con discutibile rigore giuridico ma notevole precisione operativa,
-      le attività tra <strong>Pioggia / Vedova Nera</strong> e <strong>Spirit / Benefattore</strong>.
+
+<section class="card">
+
+  <div class="pill">📜 Accordo consensuale SB–DI</div>
+
+  <h1 style="margin-top:16px">
+    Prima delle proposte,<br>
+    venne l'Accordo.
+  </h1>
+
+  <p class="lead">
+    Un documento concepito per disciplinare, con discutibile rigore giuridico ma notevole precisione operativa,
+    le attività tra <strong>Pioggia / Vedova Nera</strong> e <strong>Spirit / Benefattore</strong>.
+  </p>
+
+  <div class="contract-stat">
+    <div class="stat"><small>Rubrica</small><strong>00069/2026</strong></div>
+    <div class="stat"><small>Stipula</small><strong>11 luglio 2026</strong></div>
+    <div class="stat"><small>Proroghe</small><strong>1 approvata</strong></div>
+    <div class="stat"><small>Foro</small><strong>Roma</strong></div>
+  </div>
+
+  <div class="contract-live" id="liveBox">
+
+    <div class="contract-status">
+      <div>
+        <div class="eyebrow">Stato attuale</div>
+        <div id="statusBadge" class="status-badge">🟢 Accordo attivo</div>
+      </div>
+      <div style="font-size:30px">🤝</div>
+    </div>
+
+    <div class="eyebrow">Scadenza attuale</div>
+    <div class="contract-date">16 OTTOBRE 2026</div>
+    <div class="contract-sub">
+      Il giorno successivo al compleanno di Spirit. 🎂
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span>11 luglio</span>
+        <span id="daysLabel">calcolo in corso…</span>
+        <span>16 ottobre</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div class="decision-box" id="decisionBox">
+      <h3>⚠️ Decisione richiesta</h3>
+      <p class="section-text" style="margin-top:7px">
+        L'Accordo ha raggiunto la data di scadenza attualmente registrata.
+        Le Parti sono invitate a determinare il futuro della collaborazione.
+      </p>
+
+      <div class="decision-actions">
+        <button class="renew" id="renewBtn">❤️ PROPONI UNA NUOVA PROROGA</button>
+        <button class="revoke" id="revokeBtn">📄 AVVIA PROCEDURA DI REVOCA</button>
+      </div>
+
+      <div class="notice" id="decisionNotice"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="card">
+
+  <div class="eyebrow">Aggiornamento contrattuale</div>
+  <h2 style="margin-top:6px">Proroga n. 01</h2>
+
+  <div class="amendment-card">
+
+    <div class="amendment-number">Atto di proroga n. 01</div>
+
+    <div class="amendment-title">
+      Prosecuzione consensuale delle attività
+    </div>
+
+    <p class="section-text" style="margin-top:11px">
+      Le Parti, preso atto del soddisfacente andamento delle attività e ritenendo prematura la cessazione delle stesse,
+      hanno concordato la prosecuzione dell'Accordo.
     </p>
 
-    <div class="contract-stat">
-      <div class="stat"><small>Rubrica</small><strong>00069/2026</strong></div>
-      <div class="stat"><small>Stipula</small><strong>11 luglio 2026</strong></div>
-      <div class="stat"><small>Articoli</small><strong>17</strong></div>
-      <div class="stat"><small>Foro</small><strong>Roma</strong></div>
-    </div>
-  </section>
-
-  <section class="card">
-    <div class="eyebrow">Stato dell'accordo</div>
-    <h2 style="margin-top:6px">Timeline contrattuale</h2>
-    <div class="timeline">
-      <div class="timeline-item"><b>11 luglio 2026 — Stipula</b><p>L'Accordo entra in scena.</p></div>
-      <div class="timeline-item"><b>7 settembre 2026 — Scadenza originaria</b><p>Data indicata dall'art. 4.</p></div>
-      <div class="timeline-item"><b>+45 giorni — Proroga possibile</b><p>Solo se concordata dalle Parti, anche per le vie brevi.</p></div>
-      <div class="timeline-item"><b>Ulteriori proroghe</b><p>Da formalizzare mediante rinnovo o atto integrativo sottoscritto da entrambe le Parti.</p></div>
-    </div>
     <div class="softbox">
-      ⚠️ <strong>Nota dell'Ufficio Legale di Casa Sereni:</strong><br>
-      l'art. 2.2 j e l'art. 4 usano formulazioni diverse sulla proroga. Questa pagina non prova a risolvere la questione:
-      Pioggia e Spirit restano formalmente invitati a discuterne davanti a un bicchiere di vino.
-    </div>
-  </section>
-
-  <section class="card">
-    <div class="eyebrow">Estratto operativo</div>
-    <h2 style="margin-top:6px">Le clausole più memorabili</h2>
-    <div style="margin-top:10px">
-      <span class="tag">🤝 Presenza & divertimento</span>
-      <span class="tag">🍬 Regime alimentare</span>
-      <span class="tag">🍝 Carbonara</span>
-      <span class="tag">🧀 Cacio e pepe</span>
-      <span class="tag">🔒 Riservatezza</span>
-      <span class="tag">⚖️ Risoluzione</span>
-    </div>
-
-    <div class="accordion">
-      <div class="acc">
-        <button class="acc-btn">Art. 2 — Impegni delle Parti</button>
-        <div class="acc-body">
-          Spirit assume una serie di impegni di presenza, comunicazione, benessere e ristoro; tra questi compare anche
-          il ristoro con dolcetti nel rispetto del regime alimentare assegnato dalla specialista in nutrizione.
-          Pioggia assume a sua volta impegni di presenza, accoglienza, idratazione e cooperazione.
-        </div>
+      <div class="status-row">
+        <span>Nuova scadenza</span>
+        <strong>16 ottobre 2026</strong>
       </div>
-      <div class="acc">
-        <button class="acc-btn">Art. 3 — Corrispettivo</button>
-        <div class="acc-body">
-          Nessun corrispettivo economico per i servizi di Spirit. Per le obbligazioni di Pioggia, il documento prevede
-          due pasti al mese: una carbonara e una cacio e pepe.
-        </div>
+      <div class="status-row">
+        <span>Modalità</span>
+        <strong>Consensuale</strong>
       </div>
-      <div class="acc">
-        <button class="acc-btn">Art. 4 — Durata</button>
-        <div class="acc-body">
-          Validità fino al 7 settembre 2026. È prevista la possibilità di una proroga di 45 giorni concordata dalle Parti.
-          Il testo esclude il tacito rinnovo e prevede che ulteriori proroghe siano formalizzate con rinnovo o atto integrativo.
-        </div>
-      </div>
-      <div class="acc">
-        <button class="acc-btn">Art. 6 — Divieto di esclusiva</button>
-        <div class="acc-body">
-          Il testo dichiara che l'Accordo non attribuisce diritti di esclusiva e prevede comunicazione reciproca in caso di accordi analoghi.
-        </div>
-      </div>
-      <div class="acc">
-        <button class="acc-btn">Art. 8 — Riservatezza</button>
-        <div class="acc-body">
-          Le informazioni conosciute durante l'esecuzione dell'Accordo devono restare riservate durante la sua durata e,
-          secondo il testo, per i venticinque anni successivi.
-        </div>
-      </div>
-      <div class="acc">
-        <button class="acc-btn">Art. 10 — Clausola risolutiva</button>
-        <div class="acc-body">
-          Il documento prevede la possibilità di risoluzione in caso di inadempimento degli obblighi previsti dall'Accordo.
-        </div>
-      </div>
-      <div class="acc">
-        <button class="acc-btn">Art. 16–17 — Foro e negoziazione</button>
-        <div class="acc-body">
-          Diritto italiano, Foro di Roma e dichiarazione secondo cui ciascuna clausola è frutto di negoziazione e specifica approvazione delle Parti.
-        </div>
+      <div class="status-row">
+        <span>Formalizzazione</span>
+        <strong>Per le vie brevi</strong>
       </div>
     </div>
 
-    <div class="softbox center">
-      🔒 Il PDF originale non è pubblicato qui perché contiene dati personali e recapiti. Meglio conservarlo fuori da GitHub Pages.
+    <div class="amendment-state">✅ APPROVATA DALLE PARTI</div>
+
+    <a class="hero-action secondary" href="proroga-01.html">
+      APRI L'ATTO DI PROROGA →
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="card">
+
+  <div class="eyebrow">Vita dell'accordo</div>
+  <h2 style="margin-top:6px">Timeline contrattuale</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <b>11 luglio 2026 — Stipula</b>
+      <p>Nasce ufficialmente la collaborazione Pioggia × Spirit.</p>
     </div>
-  </section>
+
+    <div class="timeline-item">
+      <b>7 settembre 2026 — Scadenza originaria</b>
+      <p>Data riportata nell'Accordo originale. Superata.</p>
+    </div>
+
+    <div class="timeline-item">
+      <b>Settembre 2026 — Proroga n. 01</b>
+      <p>Le Parti decidono consensualmente di proseguire fino al 16 ottobre 2026.</p>
+    </div>
+
+    <div class="timeline-item">
+      <b>15 ottobre 2026 — Compleanno di Spirit 🎂</b>
+      <p>Evento societario di rilevanza strategica.</p>
+    </div>
+
+    <div class="timeline-item">
+      <b>16 ottobre 2026 — Nuova scadenza</b>
+      <p>La collaborazione richiederà una nuova decisione delle Parti.</p>
+    </div>
+
+  </div>
+
+  <div class="softbox">
+    ⚠️ <strong>Contenzioso interpretativo temporaneamente superato.</strong><br><br>
+    L'art. 2.2 j e l'art. 4 utilizzano formulazioni differenti sulla proroga.
+    L'Ufficio Legale di Casa Sereni ritiene la questione momentaneamente irrilevante:
+    la Proroga n. 01 è stata concordata consensualmente dalle Parti.
+  </div>
+
+</section>
+
+
+<section class="card">
+
+  <div class="eyebrow">Storico modifiche</div>
+  <h2 style="margin-top:6px">Registro dell'Accordo</h2>
+
+  <div class="contract-log">
+
+    <div class="log-row">
+      <div class="log-icon">📜</div>
+      <div>
+        <b>11/07/2026 — Versione originale</b>
+        <p>Sottoscrizione dell'Accordo consensuale SB–DI.</p>
+      </div>
+    </div>
+
+    <div class="log-row">
+      <div class="log-icon">✅</div>
+      <div>
+        <b>Settembre 2026 — Proroga n. 01</b>
+        <p>Nuova scadenza concordata: 16/10/2026.</p>
+      </div>
+    </div>
+
+    <div class="log-row">
+      <div class="log-icon">❓</div>
+      <div>
+        <b>Proroga n. 02</b>
+        <p>In attesa delle future determinazioni di Pioggia e Spirit.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="card">
+
+  <div class="eyebrow">Estratto operativo</div>
+  <h2 style="margin-top:6px">Le clausole più memorabili</h2>
+
+  <div style="margin-top:10px">
+    <span class="tag">🤝 Presenza & divertimento</span>
+    <span class="tag">🍬 Regime alimentare</span>
+    <span class="tag">🍝 Carbonara</span>
+    <span class="tag">🧀 Cacio e pepe</span>
+    <span class="tag">🔒 Riservatezza</span>
+    <span class="tag">⚖️ Risoluzione</span>
+  </div>
+
+  <div class="accordion">
+
+    <div class="acc">
+      <button class="acc-btn">Art. 2 — Impegni delle Parti</button>
+      <div class="acc-body">
+        Spirit assume una serie di impegni di presenza, comunicazione, benessere e ristoro; tra questi compare anche
+        il ristoro con dolcetti nel rispetto del regime alimentare assegnato dalla specialista in nutrizione.
+        Pioggia assume a sua volta impegni di presenza, accoglienza, idratazione e cooperazione.
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-btn">Art. 3 — Corrispettivo</button>
+      <div class="acc-body">
+        Nessun corrispettivo economico per i servizi di Spirit. Per le obbligazioni di Pioggia, il documento prevede
+        due pasti al mese: una carbonara e una cacio e pepe.
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-btn">Art. 4 — Durata</button>
+      <div class="acc-body">
+        L'Accordo originale indicava validità fino al 7 settembre 2026 e contemplava la possibilità di proroga.
+        Lo stato operativo attuale di Casa Sereni registra una Proroga n. 01 consensuale fino al 16 ottobre 2026.
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-btn">Art. 6 — Divieto di esclusiva</button>
+      <div class="acc-body">
+        Il testo dichiara che l'Accordo non attribuisce diritti di esclusiva e prevede comunicazione reciproca
+        in caso di accordi analoghi.
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-btn">Art. 8 — Riservatezza</button>
+      <div class="acc-body">
+        Le informazioni conosciute durante l'esecuzione dell'Accordo devono restare riservate durante la sua durata
+        e, secondo il testo, per i venticinque anni successivi.
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-btn">Art. 10 — Clausola risolutiva</button>
+      <div class="acc-body">
+        Il documento prevede la possibilità di risoluzione in caso di inadempimento degli obblighi previsti dall'Accordo.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="softbox center">
+    🔒 Il PDF originale non viene pubblicato su GitHub Pages perché contiene dati personali e recapiti.
+  </div>
+
+</section>
+
 </main>
-<footer>Casa Sereni — Ufficio Legale non ufficiale 🍂</footer>
-</div>
 
-<script>
-document.querySelectorAll(".acc-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>btn.parentElement.classList.toggle("open"));
-});
-</script>
+<footer>
+  Casa Sereni — Ufficio Legale non ufficiale 🍂
+</footer>
+
+</div>
 
 
 <nav class="bottom-nav">
-  <a href="index.html" class=""><span>🏠</span>Home</a>
-  <a href="calendario.html" class=""><span>📅</span>Calendario</a>
+  <a href="index.html"><span>🏠</span>Home</a>
+  <a href="calendario.html"><span>📅</span>Calendario</a>
   <a href="contratto.html" class="active"><span>📜</span>Contratto</a>
-  <a href="archivio.html" class=""><span>🗂️</span>Archivio</a>
+  <a href="archivio.html"><span>🗂️</span>Archivio</a>
 </nav>
+
 <script src="assets/common.js"></script>
-</body></html>
+
+<script>
+
+const CONTRACT_START = new Date("2026-07-11T00:00:00");
+const CONTRACT_END   = new Date("2026-10-16T23:59:59");
+const BIRTHDAY       = new Date("2026-10-15T00:00:00");
+
+function updateContractStatus(){
+
+  const now = new Date();
+  const total = CONTRACT_END - CONTRACT_START;
+  const elapsed = now - CONTRACT_START;
+
+  let percent = (elapsed / total) * 100;
+  percent = Math.max(0, Math.min(100, percent));
+
+  document.getElementById("progressFill").style.width = percent + "%";
+
+  const msDay = 24 * 60 * 60 * 1000;
+  const remaining = Math.ceil((CONTRACT_END - now) / msDay);
+
+  const box = document.getElementById("liveBox");
+  const badge = document.getElementById("statusBadge");
+  const label = document.getElementById("daysLabel");
+  const decision = document.getElementById("decisionBox");
+
+  const sameBirthday =
+    now.getFullYear() === 2026 &&
+    now.getMonth() === 9 &&
+    now.getDate() === 15;
+
+  if(now > CONTRACT_END){
+
+    box.classList.add("expired");
+    badge.className = "status-badge red";
+    badge.textContent = "⚠️ Scadenza raggiunta";
+    label.textContent = "decisione richiesta";
+    decision.classList.add("show");
+
+  } else if(sameBirthday){
+
+    box.classList.add("expiring");
+    badge.className = "status-badge orange";
+    badge.textContent = "🎂 Domani scade l'Accordo";
+    label.textContent = "1 giorno alla scadenza";
+
+  } else if(remaining <= 7){
+
+    box.classList.add("expiring");
+    badge.className = "status-badge orange";
+    badge.textContent = "🟠 Accordo in scadenza";
+    label.textContent = remaining + (remaining === 1 ? " giorno rimasto" : " giorni rimasti");
+
+  } else {
+
+    badge.className = "status-badge";
+    badge.textContent = "🟢 Accordo attivo";
+    label.textContent = remaining + " giorni alla scadenza";
+  }
+}
+
+document.querySelectorAll(".acc-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    btn.parentElement.classList.toggle("open");
+  });
+});
+
+document.getElementById("renewBtn").onclick = ()=>{
+  const n = document.getElementById("decisionNotice");
+  n.textContent = "❤️ Richiesta registrata localmente: Pioggia e Spirit sono invitati a negoziare la Proroga n. 02.";
+  n.classList.add("show");
+  confetti(["❤️","📜","✨","🍂"],30);
+};
+
+document.getElementById("revokeBtn").onclick = ()=>{
+  const n = document.getElementById("decisionNotice");
+  n.textContent = "📄 Procedura simbolica avviata. L'Ufficio Legale ricorda che una decisione così grave merita almeno una riunione straordinaria.";
+  n.classList.add("show");
+};
+
+updateContractStatus();
+
+</script>
+
+</body>
+</html>
