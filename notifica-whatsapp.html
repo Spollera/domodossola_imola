@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8a5b43">
+<title>Avvisa Pioggia — Casa Sereni</title>
+<link rel="stylesheet" href="assets/style-v3.css?v=4">
+</head>
+<body>
+
+<div class="bg">
+  <div class="glow"></div>
+  <div class="moon"></div>
+  <div class="fall">🍂</div>
+  <div class="fall">💌</div>
+  <div class="fall">🍁</div>
+  <div class="fall">✨</div>
+  <div class="fall">🍂</div>
+  <div class="fog"></div>
+</div>
+
+<div class="wa-helper-v4">
+<section class="card">
+
+  <div class="pill">💌 Ufficio Proposte di Spirit</div>
+
+  <h1 style="margin-top:16px">Avvisa Pioggia</h1>
+
+  <p class="lead">
+    Questo pulsante apre WhatsApp con il messaggio già preparato.
+    Devi soltanto scegliere Pioggia come destinataria e premere invio.
+  </p>
+
+  <div class="softbox" style="margin-top:18px">
+    <div class="eyebrow">Messaggio</div>
+
+    <p class="section-text" style="margin-top:7px">
+      <strong>C'è posta per te! 💌</strong><br><br>
+      Una nuova proposta dell'Ufficio di Spirit è arrivata a Casa Sereni. 👀🍂<br><br>
+      Tocca il link e scopri cosa ti aspetta stasera. 👻❤️
+    </p>
+  </div>
+
+  <button class="hero-action green" id="waBtn">APRI WHATSAPP 💬</button>
+
+  <a class="hero-action secondary" href="index.html">← TORNA A CASA SERENI</a>
+
+</section>
+</div>
+
+<script>
+document.getElementById("waBtn").onclick = ()=>{
+  const site =
+    window.location.href.replace(
+      /notifica-whatsapp\.html.*$/,
+      "eventi/2026-10-05-the-nun-2.html"
+    );
+
+  const text =
+    "C'è posta per te! 💌\n\n" +
+    "Una nuova proposta dell'Ufficio di Spirit è arrivata a Casa Sereni. 👀🍂\n\n" +
+    "Tocca il link e scopri cosa ti aspetta stasera. 👻❤️\n\n" +
+    site;
+
+  window.location.href =
+    "https://wa.me/?text=" + encodeURIComponent(text);
+};
+</script>
+
+</body>
+</html>
