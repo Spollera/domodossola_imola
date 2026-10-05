@@ -715,3 +715,141 @@ footer{text-align:center;color:rgba(255,248,240,.8);font-size:11px;line-height:1
   }
   .registry-title-v3{font-size:18px}
 }
+
+
+/* =========================================================
+   V4 — THE NUN II / PROPOSTA LIBERA / VINO
+========================================================= */
+
+.horror-hero-v4{
+  position:relative;
+  overflow:hidden;
+  border-radius:22px;
+  padding:22px 18px;
+  margin-top:16px;
+  color:#f7eee7;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(255,240,215,.13), transparent 25%),
+    linear-gradient(160deg,#433836,#252223);
+  border:1px solid rgba(255,255,255,.06);
+}
+.horror-hero-v4::after{
+  content:"🕯️";
+  position:absolute;
+  right:15px;
+  top:10px;
+  font-size:36px;
+  opacity:.55;
+}
+.horror-title-v4{
+  font-family:Georgia,serif;
+  font-size:28px;
+  line-height:1.05;
+  margin-top:8px;
+}
+.horror-sub-v4{
+  font-size:12px;
+  line-height:1.55;
+  opacity:.73;
+  margin-top:8px;
+  max-width:85%;
+}
+.free-choice-v4{
+  margin-top:14px;
+  padding:16px;
+  border-radius:18px;
+  background:rgba(255,255,255,.46);
+  border:1px solid var(--line);
+}
+.free-choice-v4 textarea{
+  width:100%;
+  min-height:110px;
+  resize:vertical;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:13px 14px;
+  background:rgba(255,255,255,.70);
+  color:var(--ink);
+  outline:none;
+  line-height:1.45;
+}
+.free-choice-v4 textarea:focus{
+  border-color:rgba(125,80,56,.45);
+  box-shadow:0 0 0 3px rgba(125,80,56,.08);
+}
+.wine-grid-v4{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:14px;
+}
+.wine-choice-v4{
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:15px 8px;
+  text-align:center;
+  background:rgba(255,255,255,.48);
+  cursor:pointer;
+  transition:.2s ease;
+  color:var(--ink);
+}
+.wine-choice-v4:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.72);
+}
+.wine-choice-v4.selected{
+  border:2px solid rgba(126,80,55,.55);
+  padding:14px 7px;
+  background:rgba(140,85,55,.12);
+}
+.wine-emoji-v4{
+  display:block;
+  font-size:30px;
+  margin-bottom:7px;
+}
+.snack-fixed-v4{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin-top:13px;
+  padding:15px;
+  border-radius:18px;
+  background:rgba(255,255,255,.48);
+  border:1px solid var(--line);
+}
+.snack-fixed-v4 .big{
+  font-size:31px;
+  flex:0 0 36px;
+}
+.protection-v4{
+  margin-top:15px;
+  display:grid;
+  gap:8px;
+}
+.protection-row-v4{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  padding:12px 13px;
+  border-radius:15px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.06);
+  font-size:12px;
+  line-height:1.5;
+}
+.wa-helper-v4{
+  max-width:540px;
+  margin:30px auto;
+  padding:20px;
+}
+@media(max-width:420px){
+  .wine-grid-v4{grid-template-columns:1fr}
+  .wine-choice-v4{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:12px;
+    text-align:left;
+  }
+  .wine-emoji-v4{margin:0}
+}
