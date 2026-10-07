@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#8a5b43">
 <title>Avvisa Pioggia — Casa Sereni</title>
-<link rel="stylesheet" href="assets/style-v3.css?v=4">
+<link rel="stylesheet" href="assets/style-v3.css?v=5">
 </head>
 <body>
 
@@ -21,50 +21,63 @@
 </div>
 
 <div class="wa-helper-v4">
+
 <section class="card">
 
   <div class="pill">💌 Ufficio Proposte di Spirit</div>
 
-  <h1 style="margin-top:16px">Avvisa Pioggia</h1>
+  <h1 style="margin-top:16px">
+    Avvisa Pioggia
+  </h1>
 
   <p class="lead">
-    Questo pulsante apre WhatsApp con il messaggio già preparato.
-    Devi soltanto scegliere Pioggia come destinataria e premere invio.
+    Questa pagina resta sempre la stessa: ogni volta che nasce una nuova proposta,
+    premi il pulsante qui sotto e WhatsApp preparerà il messaggio da inviare a Pioggia.
   </p>
 
   <div class="softbox" style="margin-top:18px">
-    <div class="eyebrow">Messaggio</div>
+
+    <div class="eyebrow">
+      Messaggio
+    </div>
 
     <p class="section-text" style="margin-top:7px">
       <strong>C'è posta per te! 💌</strong><br><br>
       Una nuova proposta dell'Ufficio di Spirit è arrivata a Casa Sereni. 👀🍂<br><br>
-      Tocca il link e scopri cosa ti aspetta stasera. 👻❤️
+      Tocca il link e scopri cosa ti aspetta. ❤️
     </p>
+
   </div>
 
-  <button class="hero-action green" id="waBtn">APRI WHATSAPP 💬</button>
+  <button class="hero-action green" id="waBtn">
+    INVIA A PIOGGIA SU WHATSAPP 💬
+  </button>
 
-  <a class="hero-action secondary" href="index.html">← TORNA A CASA SERENI</a>
+  <a class="hero-action secondary" href="index.html">
+    ← TORNA A CASA SERENI
+  </a>
 
 </section>
+
 </div>
 
 <script>
 document.getElementById("waBtn").onclick = ()=>{
-  const site =
-    window.location.href.replace(
-      /notifica-whatsapp\.html.*$/,
-      "eventi/2026-10-05-the-nun-2.html"
-    );
+
+  // Invia sempre la HOME: la Home contiene sempre la proposta attiva più recente.
+  const homeUrl =
+    window.location.origin +
+    window.location.pathname.replace(/notifica-whatsapp\.html.*$/, "index.html");
 
   const text =
     "C'è posta per te! 💌\n\n" +
     "Una nuova proposta dell'Ufficio di Spirit è arrivata a Casa Sereni. 👀🍂\n\n" +
-    "Tocca il link e scopri cosa ti aspetta stasera. 👻❤️\n\n" +
-    site;
+    "Tocca il link e scopri cosa ti aspetta. ❤️\n\n" +
+    homeUrl;
 
   window.location.href =
-    "https://wa.me/?text=" + encodeURIComponent(text);
+    "https://wa.me/?text=" +
+    encodeURIComponent(text);
 };
 </script>
 
