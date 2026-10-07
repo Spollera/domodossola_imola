@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#819472">
+<title>Operazione Tisanina — Casa Sereni</title>
+<link rel="stylesheet" href="../assets/style-v3.css?v=5">
+</head>
+<body>
+
+<div class="bg">
+  <div class="glow"></div>
+  <div class="moon"></div>
+  <div class="fall">🍂</div>
+  <div class="fall">☕</div>
+  <div class="fall">🍁</div>
+  <div class="fall">❤️</div>
+  <div class="fall">🍂</div>
+  <div class="fog"></div>
+</div>
+
+<div class="shell">
+
+<header>
+  <div class="kicker">Le proposte di Spirit</div>
+  <div class="brand">Casa Sereni</div>
+  <div class="season">7 OTTOBRE 2026 • MODALITÀ COCCOLE</div>
+</header>
+
+<main>
+
+<section class="card">
+
+  <div class="pill">☕ Operazione Tisanina</div>
+
+  <h1 style="margin-top:16px">
+    Ciao Pioggia.<br>
+    Stasera niente eroismi.
+  </h1>
+
+  <p class="lead">
+    Visto che Pioggia non è esattamente al massimo della forma tra raffreddore e tosse,
+    l'Ufficio Proposte dispone una serata a bassa intensità:
+    <strong>qualcosa di caldo, un film tranquillo, divano e coccole.</strong>
+  </p>
+
+  <div class="comfort-hero-v5">
+    <div class="eyebrow">Elemento imprescindibile</div>
+    <div class="comfort-title-v5">Tisanina obbligatoria ☕</div>
+    <div class="comfort-note-v5">
+      Questa sera non è sottoposta a votazione.
+      È considerata dotazione minima di Casa Sereni.
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="eyebrow">Fase 01</div>
+    <div class="section-title">🥣 Che tipo di cena vuole Pioggia?</div>
+
+    <p class="section-text">
+      Spirit non sa bene cosa Pioggia riesca o abbia voglia di mangiare,
+      quindi la decisione viene rimessa direttamente alla parte interessata.
+    </p>
+
+    <div class="binary-grid-v5" id="dinnerChoices">
+
+      <button class="binary-choice-v5" data-group="dinner" data-value="Solida">
+        <strong>🍝 CENA SOLIDA</strong>
+        <small>Qualcosa di caldo, ma da mangiare normalmente.</small>
+      </button>
+
+      <button class="binary-choice-v5" data-group="dinner" data-value="Liquida">
+        <strong>🥣 CENA LIQUIDA</strong>
+        <small>Minestra, vellutata, brodo o simili.</small>
+      </button>
+
+    </div>
+
+    <div class="answer-box-v5 show">
+      <input id="dinnerNote" maxlength="180"
+        placeholder="Se hai un'idea precisa, scrivila qui…">
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="eyebrow">Fase 02</div>
+    <div class="section-title">🎬 Protocollo Horror sospeso</div>
+
+    <p class="section-text">
+      Considerata la condizione già precaria di Pioggia,
+      Spirit questa sera non ritiene opportuno aggiungere traumi cinematografici.
+      Si passa quindi a un <strong>film tranquillo</strong>.
+    </p>
+
+    <div class="binary-grid-v5">
+
+      <button class="binary-choice-v5" data-group="movie" data-value="Propone Pioggia">
+        <strong>🎞️ PROPONGO IO</strong>
+        <small>Pioggia sceglie o suggerisce il film.</small>
+      </button>
+
+      <button class="binary-choice-v5" data-group="movie" data-value="Sceglie Spirit">
+        <strong>🎬 SCEGLI TU, SPIRIT</strong>
+        <small>Delega completa all'Ufficio Proposte.</small>
+      </button>
+
+    </div>
+
+    <div class="answer-box-v5" id="movieProposalBox">
+      <textarea id="movieProposal" maxlength="250"
+        placeholder="Che film vorresti vedere? Puoi anche scrivere più proposte…"></textarea>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="eyebrow">Fase 03</div>
+    <div class="section-title">🌙 Pernottamento straordinario</div>
+
+    <p class="section-text">
+      Il Protocollo Anti-Incubo questa sera non serve,
+      ma Spirit propone comunque di restare a dormire:
+      il calore e gli abbracci potrebbero costituire una terapia
+      non scientificamente certificata ma decisamente gradevole.
+    </p>
+
+    <div class="binary-grid-v5">
+
+      <button class="binary-choice-v5" data-group="sleep" data-value="Spirit resta a dormire">
+        <strong>🫂 RESTA</strong>
+        <small>Nessun impegno urgente domattina.</small>
+      </button>
+
+      <button class="binary-choice-v5" data-group="sleep" data-value="Da valutare">
+        <strong>⏰ DA VALUTARE</strong>
+        <small>Ci sono impegni o la mattina è ancora incerta.</small>
+      </button>
+
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="eyebrow">Fase 04</div>
+    <div class="section-title">🛒 Divisione ufficiale dei compiti</div>
+
+    <div class="responsibility-v5">
+
+      <div class="responsibility-row-v5">
+        <div>👻</div>
+        <div>
+          <strong>Spirit</strong><br>
+          Si occupa di reperire tutto il necessario per la cena,
+          la tisanina e la serata.
+        </div>
+      </div>
+
+      <div class="responsibility-row-v5">
+        <div>🌧️</div>
+        <div>
+          <strong>Pioggia</strong><br>
+          Deve occuparsi soltanto di preparare la tavola
+          e predisporre il divano per film e coccole.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="eyebrow">Clausola accessoria</div>
+    <div class="section-title">😏 Operatività contrattuale di Spirit</div>
+
+    <div class="performance-v5">
+
+      <p class="section-text">
+        Nonostante la modalità convalescenza, Spirit comunica di essere
+        <strong>tecnicamente operativo</strong>.
+        Qualora Pioggia lo desideri e lo richieda,
+        Spirit è disponibile a dare seguito a una
+        <strong>Performance prevista dall'Accordo</strong>.
+      </p>
+
+      <p class="section-text" style="margin-top:9px">
+        Naturalmente non esiste alcun automatismo:
+        la clausola si attiva esclusivamente su richiesta e volontà di Pioggia.
+      </p>
+
+      <div class="binary-grid-v5">
+
+        <button class="binary-choice-v5" data-group="performance" data-value="Disponibilità registrata 😏">
+          <strong>😏 TENIAMOLA DISPONIBILE</strong>
+          <small>Pioggia si riserva ogni eventuale decisione sul posto.</small>
+        </button>
+
+        <button class="binary-choice-v5" data-group="performance" data-value="Riposo assoluto 🫖">
+          <strong>🫖 RIPOSO ASSOLUTO</strong>
+          <small>Stasera solo recupero, film e coccole.</small>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="summary show" id="summary">
+
+    <h2 class="center">📜 Modulo serata di Pioggia</h2>
+
+    <div class="summary-row">
+      <div class="ico">☕</div>
+      <div><strong>Tisanina</strong><br>Obbligatoria</div>
+    </div>
+
+    <div class="summary-row">
+      <div class="ico">🥣</div>
+      <div><strong>Cena</strong><br><span id="sumDinner">Da scegliere</span></div>
+    </div>
+
+    <div class="summary-row">
+      <div class="ico">🎬</div>
+      <div><strong>Film</strong><br><span id="sumMovie">Da scegliere</span></div>
+    </div>
+
+    <div class="summary-row">
+      <div class="ico">🌙</div>
+      <div><strong>Pernottamento</strong><br><span id="sumSleep">Da scegliere</span></div>
+    </div>
+
+    <div class="summary-row">
+      <div class="ico">😏</div>
+      <div><strong>Clausola Performance</strong><br><span id="sumPerformance">Da scegliere</span></div>
+    </div>
+
+    <div class="summary-row">
+      <div class="ico">🛒</div>
+      <div><strong>Logistica</strong><br>Spirit compra il necessario. Pioggia prepara tavola e divano.</div>
+    </div>
+
+    <div class="form-warning-v5" id="formWarning">
+      Prima di inviare il modulo, completa almeno cena, film e pernottamento.
+    </div>
+
+    <button class="hero-action whatsapp-submit-v5" id="sendWhatsApp">
+      INVIA TUTTO A SPIRIT SU WHATSAPP 💬
+    </button>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>Casa Sereni — Ufficio Proposte di Spirit 🍂</footer>
+
+</div>
+
+
+<nav class="bottom-nav">
+  <a href="../index.html"><span>🏠</span>Home</a>
+  <a href="../calendario.html"><span>📅</span>Calendario</a>
+  <a href="../contratto.html"><span>📜</span>Contratto</a>
+  <a href="../archivio.html" class="active"><span>🗂️</span>Archivio</a>
+</nav>
+
+<script src="../assets/common-v3.js"></script>
+
+<script>
+
+const state = {
+  dinner: localStorage.getItem("cs_20261007_dinner") || "",
+  movie: localStorage.getItem("cs_20261007_movie") || "",
+  sleep: localStorage.getItem("cs_20261007_sleep") || "",
+  performance: localStorage.getItem("cs_20261007_performance") || "",
+  dinnerNote: localStorage.getItem("cs_20261007_dinnerNote") || "",
+  movieProposal: localStorage.getItem("cs_20261007_movieProposal") || ""
+};
+
+const dinnerNote = document.getElementById("dinnerNote");
+const movieProposal = document.getElementById("movieProposal");
+const movieProposalBox = document.getElementById("movieProposalBox");
+
+dinnerNote.value = state.dinnerNote;
+movieProposal.value = state.movieProposal;
+
+function selectButton(group, value){
+  state[group] = value;
+  localStorage.setItem("cs_20261007_" + group, value);
+
+  document.querySelectorAll('[data-group="' + group + '"]').forEach(btn=>{
+    btn.classList.toggle("selected", btn.dataset.value === value);
+  });
+
+  if(group === "movie"){
+    movieProposalBox.classList.toggle("show", value === "Propone Pioggia");
+  }
+
+  renderSummary();
+}
+
+document.querySelectorAll("[data-group]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    selectButton(btn.dataset.group, btn.dataset.value);
+  });
+});
+
+dinnerNote.addEventListener("input",()=>{
+  state.dinnerNote = dinnerNote.value.trim();
+  localStorage.setItem("cs_20261007_dinnerNote", state.dinnerNote);
+  renderSummary();
+});
+
+movieProposal.addEventListener("input",()=>{
+  state.movieProposal = movieProposal.value.trim();
+  localStorage.setItem("cs_20261007_movieProposal", state.movieProposal);
+  renderSummary();
+});
+
+function renderSummary(){
+
+  let dinnerText = state.dinner || "Da scegliere";
+  if(state.dinnerNote){
+    dinnerText += " — " + state.dinnerNote;
+  }
+
+  let movieText = state.movie || "Da scegliere";
+  if(state.movie === "Propone Pioggia" && state.movieProposal){
+    movieText += " — " + state.movieProposal;
+  }
+
+  document.getElementById("sumDinner").textContent = dinnerText;
+  document.getElementById("sumMovie").textContent = movieText;
+  document.getElementById("sumSleep").textContent = state.sleep || "Da scegliere";
+  document.getElementById("sumPerformance").textContent = state.performance || "Da scegliere";
+}
+
+["dinner","movie","sleep","performance"].forEach(group=>{
+  if(state[group]){
+    document.querySelectorAll('[data-group="' + group + '"]').forEach(btn=>{
+      btn.classList.toggle("selected", btn.dataset.value === state[group]);
+    });
+  }
+});
+
+movieProposalBox.classList.toggle(
+  "show",
+  state.movie === "Propone Pioggia"
+);
+
+renderSummary();
+
+document.getElementById("sendWhatsApp").onclick = ()=>{
+
+  const warning = document.getElementById("formWarning");
+
+  if(!state.dinner || !state.movie || !state.sleep){
+    warning.classList.add("show");
+    return;
+  }
+
+  warning.classList.remove("show");
+
+  const dinnerText =
+    state.dinner +
+    (state.dinnerNote ? " — " + state.dinnerNote : "");
+
+  const movieText =
+    state.movie +
+    (state.movie === "Propone Pioggia" && state.movieProposal
+      ? " — " + state.movieProposal
+      : "");
+
+  const text =
+    "☕ CASA SERENI — Modulo di Pioggia\n\n" +
+    "🥣 Cena: " + dinnerText + "\n" +
+    "🎬 Film: " + movieText + "\n" +
+    "🌙 Pernottamento: " + state.sleep + "\n" +
+    "😏 Performance: " + (state.performance || "nessuna indicazione") + "\n\n" +
+    "☕ Tisanina: obbligatoria\n" +
+    "🛒 Spirit prende tutto il necessario\n" +
+    "🛋️ Pioggia prepara tavola e divano\n\n" +
+    "Modulo compilato e trasmesso all'Ufficio Proposte ❤️";
+
+  window.location.href =
+    "https://wa.me/?text=" + encodeURIComponent(text);
+};
+
+</script>
+
+</body>
+</html>
