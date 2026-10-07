@@ -853,3 +853,177 @@ footer{text-align:center;color:rgba(255,248,240,.8);font-size:11px;line-height:1
   }
   .wine-emoji-v4{margin:0}
 }
+
+
+/* =========================================================
+   V5 — TISANINA / SERATA SOFT / MODULO WHATSAPP
+========================================================= */
+
+.comfort-hero-v5{
+  position:relative;
+  overflow:hidden;
+  margin-top:16px;
+  padding:21px 18px;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255,255,255,.42), transparent 28%),
+    linear-gradient(145deg, rgba(133,153,115,.20), rgba(255,255,255,.48));
+  border:1px solid rgba(102,122,86,.14);
+}
+
+.comfort-hero-v5::after{
+  content:"☕";
+  position:absolute;
+  right:15px;
+  top:12px;
+  font-size:36px;
+  opacity:.62;
+}
+
+.comfort-title-v5{
+  font-family:Georgia,serif;
+  font-size:27px;
+  line-height:1.1;
+  margin-top:7px;
+}
+
+.comfort-note-v5{
+  margin-top:8px;
+  max-width:86%;
+  font-size:12px;
+  line-height:1.55;
+  color:#665047;
+}
+
+.binary-grid-v5{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin-top:14px;
+}
+
+.binary-choice-v5{
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:15px 12px;
+  text-align:left;
+  background:rgba(255,255,255,.50);
+  color:var(--ink);
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.binary-choice-v5:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.72);
+}
+
+.binary-choice-v5.selected{
+  border:2px solid rgba(111,138,99,.58);
+  padding:14px 11px;
+  background:rgba(111,138,99,.12);
+}
+
+.binary-choice-v5 strong{
+  display:block;
+  font-size:13px;
+}
+
+.binary-choice-v5 small{
+  display:block;
+  margin-top:4px;
+  font-size:10px;
+  line-height:1.4;
+  opacity:.62;
+}
+
+.answer-box-v5{
+  display:none;
+  margin-top:11px;
+}
+
+.answer-box-v5.show{
+  display:block;
+  animation:up .3s ease;
+}
+
+.answer-box-v5 textarea,
+.answer-box-v5 input{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:13px 14px;
+  background:rgba(255,255,255,.68);
+  color:var(--ink);
+  outline:none;
+}
+
+.answer-box-v5 textarea{
+  min-height:92px;
+  resize:vertical;
+  line-height:1.45;
+}
+
+.fixed-comfort-v5{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  margin-top:13px;
+  padding:15px;
+  border-radius:18px;
+  background:rgba(255,255,255,.48);
+  border:1px solid var(--line);
+}
+
+.fixed-comfort-v5 .big{
+  flex:0 0 36px;
+  font-size:30px;
+}
+
+.responsibility-v5{
+  display:grid;
+  gap:8px;
+  margin-top:13px;
+}
+
+.responsibility-row-v5{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  padding:12px 13px;
+  border-radius:15px;
+  background:rgba(255,255,255,.45);
+  border:1px solid var(--line);
+  font-size:12px;
+  line-height:1.5;
+}
+
+.performance-v5{
+  margin-top:14px;
+  padding:17px;
+  border-radius:20px;
+  background:linear-gradient(145deg, rgba(125,80,56,.10), rgba(255,255,255,.43));
+  border:1px solid rgba(125,80,56,.12);
+}
+
+.whatsapp-submit-v5{
+  background:#527d5a !important;
+}
+
+.form-warning-v5{
+  display:none;
+  margin-top:12px;
+  padding:11px 12px;
+  border-radius:13px;
+  background:rgba(159,102,68,.10);
+  font-size:11px;
+  line-height:1.45;
+}
+
+.form-warning-v5.show{
+  display:block;
+}
+
+@media(max-width:420px){
+  .binary-grid-v5{grid-template-columns:1fr}
+}
