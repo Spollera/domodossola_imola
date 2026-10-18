@@ -1138,3 +1138,20 @@ footer{text-align:center;color:rgba(255,248,240,.8);font-size:11px;line-height:1
 @media(max-width:420px){
   .birthday-title-v6{font-size:25px}
 }
+
+/* V7 — Rientro da Sofia */
+.travel-hero-v7{position:relative;overflow:hidden;margin-top:16px;padding:21px 18px;border-radius:22px;color:#f8f0e8;background:radial-gradient(circle at 85% 12%,rgba(239,225,190,.15),transparent 28%),linear-gradient(150deg,#5c5148,#302d2b);border:1px solid rgba(255,255,255,.07)}
+.travel-hero-v7::after{content:"⛪";position:absolute;right:15px;top:12px;font-size:38px;opacity:.72}
+.travel-title-v7{font-family:Georgia,serif;font-size:27px;line-height:1.08;margin-top:7px}
+.travel-note-v7{margin-top:8px;max-width:84%;font-size:12px;line-height:1.55;opacity:.78}
+.countdown-v7{margin-top:16px;padding:18px;border-radius:21px;background:linear-gradient(145deg,rgba(111,138,99,.15),rgba(255,255,255,.48));border:1px solid rgba(111,138,99,.17)}
+.countdown-grid-v7{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:13px}
+.countdown-unit-v7{padding:12px 5px;border-radius:15px;text-align:center;background:rgba(255,255,255,.56);border:1px solid var(--line)}
+.countdown-unit-v7 strong{display:block;font-family:Georgia,serif;font-size:23px;line-height:1}
+.countdown-unit-v7 small{display:block;margin-top:5px;font-size:8px;letter-spacing:1px;text-transform:uppercase;opacity:.55}
+.route-v7{display:grid;gap:8px;margin-top:13px}
+.route-row-v7{display:flex;gap:11px;align-items:flex-start;padding:12px 13px;border-radius:15px;background:rgba(255,255,255,.46);border:1px solid var(--line);font-size:12px;line-height:1.5}
+.time-input-v7{margin-top:12px}
+.time-input-v7 input,.time-input-v7 textarea{width:100%;border:1px solid var(--line);border-radius:15px;padding:13px 14px;background:rgba(255,255,255,.70);color:var(--ink);outline:none}
+.time-input-v7 textarea{min-height:92px;resize:vertical;line-height:1.45}
+.return-badge-v7{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:7px 10px;border-radius:999px;background:rgba(111,138,99,.14);color:#53664a;font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
