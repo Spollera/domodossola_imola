@@ -1155,3 +1155,11 @@ footer{text-align:center;color:rgba(255,248,240,.8);font-size:11px;line-height:1
 .time-input-v7 input,.time-input-v7 textarea{width:100%;border:1px solid var(--line);border-radius:15px;padding:13px 14px;background:rgba(255,255,255,.70);color:var(--ink);outline:none}
 .time-input-v7 textarea{min-height:92px;resize:vertical;line-height:1.45}
 .return-badge-v7{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:7px 10px;border-radius:999px;background:rgba(111,138,99,.14);color:#53664a;font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+
+/* V8 — FESTEGGIAMENTO VISITA */
+.celebrate-hero-v8{position:relative;overflow:hidden;margin-top:16px;padding:21px 18px;border-radius:22px;color:#fff6ef;background:radial-gradient(circle at 86% 12%,rgba(255,230,190,.18),transparent 28%),linear-gradient(150deg,#7b5142,#3b2c29);border:1px solid rgba(255,255,255,.07)}
+.celebrate-hero-v8::after{content:"🥂";position:absolute;right:15px;top:12px;font-size:38px;opacity:.78}
+.celebrate-title-v8{font-family:Georgia,serif;font-size:27px;line-height:1.08;margin-top:7px}
+.celebrate-note-v8{margin-top:8px;max-width:84%;font-size:12px;line-height:1.55;opacity:.82}
+.spicy-box-v8{margin-top:14px;padding:17px;border-radius:20px;background:linear-gradient(145deg,rgba(147,76,64,.10),rgba(255,255,255,.45));border:1px solid rgba(147,76,64,.13)}
+.sleep-box-v8{margin-top:14px;padding:17px;border-radius:20px;background:linear-gradient(145deg,rgba(111,138,99,.12),rgba(255,255,255,.46));border:1px solid rgba(111,138,99,.15)}
