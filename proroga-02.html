@@ -1,1 +1,149 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Proroga n. 02</title></head><body><h1>Proroga n. 02</h1><p>Casa Sereni</p></body></html>
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8a5b43">
+<title>Proroga n. 02 — Casa Sereni</title>
+<link rel="stylesheet" href="assets/style-v3.css?v=9">
+<style>
+.guardian{margin-top:14px;padding:18px;border-radius:20px;background:#332c2a;color:#f7eee8}
+.guardian .section-text{color:#f1e4db}
+.sigbox{margin-top:14px;padding:15px;border:1px solid rgba(83,52,40,.13);border-radius:18px;background:rgba(255,255,255,.48)}
+.sigpad{width:100%;height:140px;border:1px dashed rgba(83,52,40,.28);border-radius:14px;background:#fff;touch-action:none;display:block}
+.sigactions{display:flex;gap:8px;margin-top:8px}
+.sigactions button{border:0;border-radius:12px;padding:9px 11px;background:rgba(80,50,40,.08);color:#4a3026;font-size:10px;font-weight:800;cursor:pointer}
+.sigstate{font-size:10px;font-weight:800;margin-top:7px}
+</style>
+</head>
+<body>
+<div class="bg"><div class="glow"></div><div class="moon"></div><div class="fall">🍂</div><div class="fall">📜</div><div class="fall">⚖️</div><div class="fall">🤝</div><div class="fall">🍁</div><div class="fog"></div></div>
+
+<div class="shell">
+<header>
+<div class="kicker">Casa Sereni • Archivio contrattuale</div>
+<div class="brand">Proroga n. 02</div>
+<div class="season">ATTO INTEGRATIVO • 20 OTTOBRE 2026</div>
+</header>
+
+<main>
+<section class="card">
+<div class="pill">📝 Da sottoscrivere</div>
+<div class="eyebrow" style="margin-top:18px">Accordo consensuale SB–DI • Rubrica 00069/2026</div>
+<h1>Altri 45 giorni<br>di collaborazione</h1>
+<p class="lead">Pioggia e Spirit predispongono la seconda proroga dell'Accordo.</p>
+
+<div class="softbox">
+<div class="status-row"><span>Decorrenza</span><strong>17 ottobre 2026</strong></div>
+<div class="status-row"><span>Durata</span><strong>45 giorni</strong></div>
+<div class="status-row"><span>Nuova scadenza</span><strong>30 novembre 2026</strong></div>
+<div class="status-row"><span>Stato</span><strong id="docStatus">In attesa delle firme</strong></div>
+</div>
+
+<div class="section">
+<div class="eyebrow">Art. 1</div>
+<div class="section-title">Durata</div>
+<p class="section-text">Le Parti concordano una proroga di 45 giorni, dal 17 ottobre al 30 novembre 2026, senza soluzione di continuità rispetto alla precedente proroga.</p>
+</div>
+
+<div class="section">
+<div class="eyebrow">Art. 2</div>
+<div class="section-title">Conferma del testo precedente</div>
+<p class="section-text">Per tutto quanto non modificato dal presente atto, restano ferme le disposizioni dell'Accordo originario e della Proroga n. 01.</p>
+</div>
+
+<div class="section">
+<div class="eyebrow">Art. 3 • Novità istituzionale</div>
+<div class="section-title">👑 Garante Coniugale di Pioggia™</div>
+<div class="guardian">
+<h3>Alta Commissaria per la Tutela degli Interessi di Pioggia</h3>
+<p class="section-text" style="margin-top:9px">A seguito della richiesta di avere un ruolo nella collaborazione, viene istituita la figura del <strong>Garante Coniugale di Pioggia™</strong>, detta anche “la Moglie”.</p>
+<p class="section-text" style="margin-top:9px">Il Garante non diventa Parte dell'Accordo, ma può formulare osservazioni, pareri, contestazioni e richieste di chiarimento sulla collaborazione Pioggia × Spirit.</p>
+<p class="section-text" style="margin-top:9px">Il parere è consultivo ma, per evidenti ragioni diplomatiche, è raccomandato ascoltarlo con attenzione. 😂</p>
+<p class="section-text" style="margin-top:9px">Il Garante dichiara di agire con imparzialità, nei limiti oggettivi derivanti dal proprio rapporto con Pioggia.</p>
+</div>
+</div>
+
+<div class="section">
+<div class="eyebrow">Art. 4</div>
+<div class="section-title">⚖️ Camera di Conciliazione di Civitella Roveto™</div>
+<p class="section-text">In caso di controversia interna, Pioggia e Spirit possono convocare una riunione preliminare di conciliazione a Civitella Roveto, con facoltà di intervento del Garante.</p>
+<p class="section-text" style="margin-top:8px">La procedura è interna e giocosa e non modifica il Foro di Roma previsto dall'Accordo originario.</p>
+</div>
+
+<div class="section">
+<div class="eyebrow">Art. 5</div>
+<div class="section-title">✍️ Firme</div>
+<p class="section-text">La proroga si considera approvata nell'archivio di Casa Sereni quando risultano salvate le firme di Pioggia e Spirit. La firma del Garante è facoltativa.</p>
+
+<div class="sigbox">
+<strong>Pioggia / Vedova Nera</strong>
+<canvas class="sigpad" id="p"></canvas>
+<div class="sigactions"><button onclick="saveSig('p')">SALVA FIRMA</button><button onclick="clearSig('p')">CANCELLA</button></div>
+<div class="sigstate" id="sp">Da firmare</div>
+</div>
+
+<div class="sigbox">
+<strong>Spirit / Benefattore</strong>
+<canvas class="sigpad" id="s"></canvas>
+<div class="sigactions"><button onclick="saveSig('s')">SALVA FIRMA</button><button onclick="clearSig('s')">CANCELLA</button></div>
+<div class="sigstate" id="ss">Da firmare</div>
+</div>
+
+<div class="sigbox">
+<strong>Garante Coniugale di Pioggia™</strong>
+<canvas class="sigpad" id="g"></canvas>
+<div class="sigactions"><button onclick="saveSig('g')">SALVA FIRMA</button><button onclick="clearSig('g')">CANCELLA</button></div>
+<div class="sigstate" id="sg">Firma facoltativa</div>
+</div>
+
+<button class="hero-action green" id="wa" style="display:none">INVIA CONFERMA SU WHATSAPP 💬</button>
+</div>
+
+<div class="softbox center">Atto interno e giocoso di Casa Sereni. Le firme sono salvate soltanto sul dispositivo utilizzato.</div>
+<a class="hero-action secondary" href="contratto.html">← TORNA AL CONTRATTO</a>
+</section>
+</main>
+
+<footer>Casa Sereni — Ufficio Legale non ufficiale 🍂</footer>
+</div>
+
+<nav class="bottom-nav">
+<a href="index.html"><span>🏠</span>Home</a>
+<a href="calendario.html"><span>📅</span>Calendario</a>
+<a href="contratto.html" class="active"><span>📜</span>Contratto</a>
+<a href="archivio.html"><span>🗂️</span>Archivio</a>
+</nav>
+
+<script>
+const pads={};
+function init(id){
+ const c=document.getElementById(id),x=c.getContext('2d'); let draw=false;
+ function resize(){const r=c.getBoundingClientRect(),d=devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;x.setTransform(d,0,0,d,0,0);x.lineWidth=2;x.lineCap='round';x.strokeStyle='#4a3026';restore(id)}
+ resize(); window.addEventListener('resize',resize);
+ function pt(e){const r=c.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+ c.addEventListener('pointerdown',e=>{draw=true;c.setPointerCapture(e.pointerId);const q=pt(e);x.beginPath();x.moveTo(q.x,q.y)});
+ c.addEventListener('pointermove',e=>{if(!draw)return;const q=pt(e);x.lineTo(q.x,q.y);x.stroke()});
+ c.addEventListener('pointerup',()=>draw=false);c.addEventListener('pointercancel',()=>draw=false);
+ pads[id]={c,x};
+}
+function restore(id){const d=localStorage.getItem('cs_p2_'+id);if(!d||!pads[id])return;const img=new Image();img.onload=()=>{const r=pads[id].c.getBoundingClientRect();pads[id].x.drawImage(img,0,0,r.width,r.height)};img.src=d}
+function saveSig(id){localStorage.setItem('cs_p2_'+id,pads[id].c.toDataURL());status()}
+function clearSig(id){localStorage.removeItem('cs_p2_'+id);pads[id].x.clearRect(0,0,pads[id].c.width,pads[id].c.height);status()}
+function status(){
+ const p=!!localStorage.getItem('cs_p2_p'),s=!!localStorage.getItem('cs_p2_s'),g=!!localStorage.getItem('cs_p2_g');
+ document.getElementById('sp').textContent=p?'Firmato ✓':'Da firmare';
+ document.getElementById('ss').textContent=s?'Firmato ✓':'Da firmare';
+ document.getElementById('sg').textContent=g?'Firmato ✓':'Firma facoltativa';
+ document.getElementById('docStatus').textContent=p&&s?'APPROVATA ✅':'In attesa delle firme';
+ document.getElementById('wa').style.display=p&&s?'block':'none';
+}
+['p','s','g'].forEach(init); status();
+document.getElementById('wa').onclick=()=>{
+ const g=!!localStorage.getItem('cs_p2_g');
+ const msg='📜 CASA SERENI — Proroga n. 02\n\n✅ Pioggia: firmato\n✅ Spirit: firmato\n'+(g?'✅ Garante Coniugale: firmato\n':'➖ Garante Coniugale: firma facoltativa\n')+'\nDurata: 45 giorni\nScadenza: 30 novembre 2026\n\nProroga n. 02 approvata ❤️';
+ location.href='https://wa.me/?text='+encodeURIComponent(msg);
+};
+</script>
+</body>
+</html>
