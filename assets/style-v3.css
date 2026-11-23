@@ -1206,3 +1206,37 @@ footer{text-align:center;color:rgba(255,248,240,.8);font-size:11px;line-height:1
   0%,100%{transform:scale(1);opacity:1}
   50%{transform:scale(1.28);opacity:.72}
 }
+
+
+/* =========================================================
+   V11 — FIRME E DECOMPRESSIONE
+========================================================= */
+.document-hero-v11{
+  position:relative;overflow:hidden;margin-top:16px;padding:21px 18px;border-radius:22px;
+  background:linear-gradient(145deg,rgba(111,138,99,.15),rgba(255,255,255,.48));
+  border:1px solid rgba(111,138,99,.17)
+}
+.document-hero-v11::after{
+  content:"✍️";position:absolute;right:15px;top:10px;font-size:38px;opacity:.72
+}
+.document-title-v11{font-family:Georgia,serif;font-size:26px;line-height:1.1;margin-top:7px}
+.proof-stamp-v11{
+  display:block;margin-top:14px;padding:12px 14px;border-radius:15px;text-align:center;
+  background:rgba(111,138,99,.13);border:1px solid rgba(111,138,99,.18);
+  color:#53664a;font-size:11px;font-weight:900;letter-spacing:1px
+}
+.outfit-grid-v11{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:13px}
+.outfit-v11{padding:12px 8px;border-radius:15px;text-align:center;background:rgba(255,255,255,.48);border:1px solid var(--line)}
+.outfit-v11 span{display:block;font-size:25px;margin-bottom:5px}
+.outfit-v11 strong{display:block;font-size:10px}
+.outfit-v11 small{display:block;font-size:8px;line-height:1.35;opacity:.58;margin-top:4px}
+.nutrition-note-v11{
+  margin-top:13px;padding:15px;border-radius:18px;background:rgba(173,119,68,.10);
+  border:1px solid rgba(173,119,68,.14)
+}
+.marvel-box-v11{
+  margin-top:14px;padding:17px;border-radius:20px;color:#f7eee8;
+  background:linear-gradient(155deg,#493934,#292626);border:1px solid rgba(255,255,255,.06)
+}
+.marvel-box-v11 .section-text{color:#eee0d7}
+@media(max-width:420px){.outfit-grid-v11{grid-template-columns:1fr}}
