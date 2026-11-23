@@ -24,6 +24,11 @@ function confetti(symbols=["❤️","🍂","✨","🍷","🫶"], count=35){
 (function(){
   const UPDATES = [
     {
+      id:"event-20261123-v1",
+      target:"eventi/2026-11-23-firme-decompressione.html",
+      section:"index.html"
+    },
+    {
       id:"event-20261020-v1",
       target:"eventi/2026-10-20-festeggiamento.html",
       section:"index.html"
