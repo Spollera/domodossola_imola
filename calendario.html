@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#8a5b43">
 <title>Calendario — Casa Sereni</title>
-<link rel="stylesheet" href="assets/style-v3.css?v=10">
+<link rel="stylesheet" href="assets/style-v3.css?v=11">
 </head>
 <body>
 
@@ -70,11 +70,21 @@
   <a href="archivio.html"><span>🗂️</span>Archivio</a>
 </nav>
 
-<script src="assets/common-v3.js?v=10"></script>
+<script src="assets/common-v3.js?v=11"></script>
 
 <script>
 
 const EVENTS = [
+
+  {
+    date:"2026-11-23",
+    icon:"✍️",
+    title:"Firme & Decompressione",
+    note:"Documento firmato, nuovo lavoro di Pioggia, arrabbiata, vino e ripasso Marvel.",
+    href:"eventi/2026-11-23-firme-decompressione.html",
+    type:"serata"
+  },
+
 
   {
     date:"2026-10-20",
@@ -228,7 +238,7 @@ const EVENTS = [
 
 ];
 
-let cursor = new Date(2026,9,1);
+let cursor = new Date(2026,10,1);
 
 const names=[
   "Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno",
@@ -273,7 +283,7 @@ function render(){
       el.className = "day";
     }
 
-    if(iso==="2026-10-20"){
+    if(iso==="2026-11-23"){
       el.classList.add("today");
     }
 
